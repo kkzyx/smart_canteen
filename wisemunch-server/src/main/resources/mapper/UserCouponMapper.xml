@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.holly.mapper.UserCouponMapper">
+    
+    <select id="listByUserId" resultType="com.holly.vo.UserCouponVO">
+        SELECT 
+            uc.id,
+            uc.coupon_id AS couponId,
+            c.name,
+            c.type,
+            c.discount_amount AS discountAmount,
+            c.discount_rate AS discountRate,
+            c.min_amount AS minAmount,
+            c.start_time AS startTime,
+            c.end_time AS endTime,
+            c.description,
+            uc.status,
+            uc.receive_time AS receiveTime,
+            uc.use_time AS useTime
+        FROM user_coupon uc
+        INNER JOIN coupon c ON uc.coupon_id = c.id
+        WHERE uc.user_id = #{userId}
+        <if test="status != null">
+            AND uc.status = #{status}
+        </if>
+        ORDER BY 
+            CASE uc.status
+                WHEN 0 THEN 1
+                WHEN 2 THEN 2
+                WHEN 1 THEN 3
+            END,
+            uc.receive_time DESC
+    </select>
+</mapper>

@@ -1,0 +1,25 @@
+package com.holly.minio;
+
+import com.holly.properties.MinioProperties;
+import io.minio.MinioClient;
+import lombok.RequiredArgsConstructor;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+@EnableConfigurationProperties(MinioProperties.class)
+@RequiredArgsConstructor
+@ConditionalOnProperty(name = "minio.endpoint")
+public class MinioConfiguration {
+    private final MinioProperties minioProperties;
+
+    @Bean
+    public MinioClient minioClient() {
+        return MinioClient.builder()
+                .endpoint(minioProperties.getEndpoint())
+                .credentials(minioProperties.getAccessKey(), minioProperties.getSecretKey())
+                .build();
+    }
+}
