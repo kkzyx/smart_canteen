@@ -95,17 +95,22 @@
             </dependency>
 
             <!-- Knife4j 是一个增强版的 Swagger UI，用于生成和展示 API 文档 -->
-            <!--            <dependency>-->
-            <!--                <groupId>com.github.xiaoymin</groupId>-->
-            <!--                <artifactId>knife4j-openapi3-jakarta-spring-boot-starter</artifactId>-->
-            <!--                <version>4.1.0</version>-->
-            <!--            </dependency>-->
+<!--                        <dependency>-->
+<!--                            <groupId>com.github.xiaoymin</groupId>-->
+<!--                            <artifactId>knife4j-openapi3-jakarta-spring-boot-starter</artifactId>-->
+<!--                            <version>4.4.0</version>-->
+<!--                        </dependency>-->
             <!--TODO 由于升级了SpringBoot3 这个已经用不了了，但是上面的依赖使用阿里云仓库能搜到却导入不进行去-->
-            <dependency>
-                <groupId>com.github.xiaoymin</groupId>
-                <artifactId>knife4j-spring-boot-starter</artifactId>
-                <version>3.0.3</version>
-            </dependency>
+<!--            <dependency>-->
+<!--                <groupId>com.github.xiaoymin</groupId>-->
+<!--                <artifactId>knife4j-spring-boot-starter</artifactId>-->
+<!--                <version>3.0.3</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>com.github.xiaoymin</groupId>-->
+<!--                <artifactId>knife4j-openapi3-jakarta-spring-boot-starter</artifactId>-->
+<!--                <version>4.5.0</version>-->
+<!--            </dependency>-->
 
             <!-- aop依赖（切面），AspectJ 是一个面向方面编程（AOP）的框架，用于实现横切关注点（如日志、事务管理等） -->
             <dependency>
@@ -251,6 +256,12 @@
                 <artifactId>minio</artifactId>
                 <version>${minio.version}</version>
             </dependency>
+
+<!--            <dependency>-->
+<!--                <groupId>org.springframework.boot</groupId>-->
+<!--                <artifactId>spring-boot-starter-data-redis</artifactId>-->
+<!--            </dependency>-->
+
         </dependencies>
 
     </dependencyManagement>

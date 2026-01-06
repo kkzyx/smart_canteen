@@ -1,7 +1,6 @@
 package com.holly.properties;
 
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
@@ -11,13 +10,14 @@ import org.springframework.stereotype.Component;
  */
 @Data
 @Component
-@ApiModel(description = "微信小程序属性配置类")
+@Schema(description = "微信小程序属性配置类")
 @ConfigurationProperties(prefix = "training.wechat")
 public class WeChatProperties {
-  
-  @ApiModelProperty("小程序的appid")
+
+  @Schema(description = "小程序的appid")
   private String appid;
-  
-  @ApiModelProperty("小程序的秘钥")
+
+  @Schema(description = "小程序的秘钥")
   private String secret;
 }
+

@@ -39,9 +39,9 @@ public class DishController {
   public Result<?> save(@RequestBody DishDTO dishDTO) {
     log.info("新增菜品信息==> {}", dishDTO);
     dishService.saveWithFlavors(dishDTO);
-    String tabIndexKey1 = CachePrefixConstant.DISH_KEY + dishDTO.getCategoryId() + "_" + 0;
-    String tabIndexKey2 = CachePrefixConstant.DISH_KEY + dishDTO.getCategoryId() + "_" + 1;
-    String recommentKey = CachePrefixConstant.RECOMMEND_DISH_KEY;
+    String tabIndexKey1 = CachePrefixConstant.DISH_KEY + dishDTO.getCategoryId() + "_" + 0;//0表示未起售
+    String tabIndexKey2 = CachePrefixConstant.DISH_KEY + dishDTO.getCategoryId() + "_" + 1;//1表示起售
+    String recommentKey = CachePrefixConstant.RECOMMEND_DISH_KEY;//推荐菜品
     // 新增菜品时，清除缓存菜品数据
     clearCache(tabIndexKey1);
     clearCache(tabIndexKey2);

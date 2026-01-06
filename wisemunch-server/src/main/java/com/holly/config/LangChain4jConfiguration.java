@@ -18,6 +18,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.data.redis.connection.RedisConnectionFactory;
 
 import static com.holly.constant.CustomerServiceConstant.REDIS_KEY_SESSION_MESSAGES;
 
@@ -30,6 +31,18 @@ public class LangChain4jConfiguration {
     
     @Autowired
     private EmbeddingModel embeddingModel;
+
+    @Bean
+    public RedisEmbeddingStore redisEmbeddingStore() {
+        return RedisEmbeddingStore.builder()
+                .host("localhost") // Redis 主机地址
+                .port(6379) // Redis 端口
+                .indexName("wisemunch_index")
+                .prefix("wisemunch-embedding:")
+                .dimension(1024) // ⭐ 阿里 text-embedding-v4 固定 1024
+                .build();
+    }
+
 
     //创建会话提供者
     @Bean
