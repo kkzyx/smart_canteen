@@ -5,20 +5,21 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.holly</groupId>
-    <artifactId>wisemunch-backend</artifactId>
+    <artifactId>smartcanteen-backend</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <modules>
-        <module>wisemunch-common</module>
-        <module>wisemunch-pojo</module>
-        <module>wisemunch-server</module>
+        <module>smartcanteen-common</module>
+        <module>smartcanteen-pojo</module>
+        <module>smartcanteen-server</module>
     </modules>
 
     <!-- 引入springboot父依赖 -->
     <parent>
         <artifactId>spring-boot-starter-parent</artifactId>
         <groupId>org.springframework.boot</groupId>
-        <version>3.4.5</version>
+        <version>3.3.12</version>
+<!--        <version>3.4.5</version>-->
     </parent>
 
     <!-- 自定义属性 -->
@@ -33,7 +34,7 @@
         <!-- 自定义属性，用于在依赖管理中统一管理各个依赖的版本号 -->
         <mybatis.spring>3.0.3</mybatis.spring>
         <lombok>1.18.38</lombok>
-        <fastjson>1.2.76</fastjson>
+<!--        <fastjson>1.2.76</fastjson>-->
         <commons.lang>2.6</commons.lang>
         <druid>1.2.20</druid>
         <pagehelper>1.4.7</pagehelper>
@@ -67,10 +68,15 @@
             </dependency>
 
             <!-- 处理json数据（序列化和反序列化 JSON 数据） -->
+<!--            <dependency>-->
+<!--                <groupId>com.alibaba</groupId>-->
+<!--                <artifactId>fastjson</artifactId>-->
+<!--                <version>${fastjson}</version>-->
+<!--            </dependency>-->
             <dependency>
-                <groupId>com.alibaba</groupId>
-                <artifactId>fastjson</artifactId>
-                <version>${fastjson}</version>
+                <groupId>com.alibaba.fastjson2</groupId>
+                <artifactId>fastjson2</artifactId>
+                <version>2.0.43</version> <!-- 建议 ≥ 2.0.40 -->
             </dependency>
 
             <!-- 实用工具类（类似前端的loadsh） -->
@@ -95,12 +101,11 @@
             </dependency>
 
             <!-- Knife4j 是一个增强版的 Swagger UI，用于生成和展示 API 文档 -->
-<!--                        <dependency>-->
-<!--                            <groupId>com.github.xiaoymin</groupId>-->
-<!--                            <artifactId>knife4j-openapi3-jakarta-spring-boot-starter</artifactId>-->
-<!--                            <version>4.4.0</version>-->
-<!--                        </dependency>-->
-            <!--TODO 由于升级了SpringBoot3 这个已经用不了了，但是上面的依赖使用阿里云仓库能搜到却导入不进行去-->
+            <dependency>
+                <groupId>com.github.xiaoymin</groupId>
+                <artifactId>knife4j-openapi3-jakarta-spring-boot-starter</artifactId>
+                <version>4.5.0</version>
+            </dependency>
 <!--            <dependency>-->
 <!--                <groupId>com.github.xiaoymin</groupId>-->
 <!--                <artifactId>knife4j-spring-boot-starter</artifactId>-->
@@ -256,7 +261,16 @@
                 <artifactId>minio</artifactId>
                 <version>${minio.version}</version>
             </dependency>
-
+<!--            <dependency>-->
+<!--                <groupId>org.springdoc</groupId>-->
+<!--                <artifactId>springdoc-openapi-starter-webmvc-api</artifactId>-->
+<!--                <version>2.3.0</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>org.springdoc</groupId>-->
+<!--                <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>-->
+<!--                <version>2.3.0</version>-->
+<!--            </dependency>-->
 <!--            <dependency>-->
 <!--                <groupId>org.springframework.boot</groupId>-->
 <!--                <artifactId>spring-boot-starter-data-redis</artifactId>-->

@@ -1,0 +1,113 @@
+package com.holly.controller.store;
+
+
+import com.holly.constant.CachePrefixConstant;
+import com.holly.dto.SetmealDTO;
+import com.holly.query.SetmealPageQueryDTO;
+import com.holly.result.PageResult;
+import com.holly.result.Result;
+import com.holly.service.SetmealService;
+import com.holly.vo.SetmealVO;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
+/**
+ * @description 套餐管理Controller
+ */
+@Slf4j
+@Tag(name = "套餐相关接口")
+@RestController
+@RequestMapping("/store/setmeal")
+@RequiredArgsConstructor
+public class SetmealController {
+  
+  private final SetmealService setmealService;
+  
+  /**
+   * 新增套餐
+   * @param setmealDTO 套餐DTO
+   */
+  @PostMapping
+  @Operation(summary = "新增套餐")
+  // 通过动态获取`setmealDTO.categoryId`中的分类id精确清除缓存
+  @CacheEvict(cacheNames = CachePrefixConstant.SETMEAL_KEY, key = "#setmealDTO.categoryId")
+  public Result<?> save(@RequestBody SetmealDTO setmealDTO) {
+    // 保存套餐及这个套餐下的关联的菜品
+    setmealService.saveWithDish(setmealDTO);
+    
+    return Result.success();
+  }
+  
+  /**
+   * 分页查询套餐
+   * @param setmealPageQueryDTO 套餐分页查询DTO
+   * @return 分页结果
+   */
+  @GetMapping("/page")
+  @Operation(summary = "分页查询套餐")
+  public Result<PageResult> page(SetmealPageQueryDTO setmealPageQueryDTO) {
+    PageResult pageResult = setmealService.pageQuery(setmealPageQueryDTO);
+    
+    return Result.success(pageResult);
+  }
+  
+  /**
+   * 批量删除套餐
+   * @param ids 套餐ID，多个ID用逗号分隔
+   */
+  @DeleteMapping
+  @Operation(summary = "批量删除套餐")
+  @CacheEvict(cacheNames = CachePrefixConstant.SETMEAL_KEY, allEntries = true) // 清除所有缓存
+  public Result<?> delete(@RequestParam List<Long> ids) {
+    setmealService.deleteBatch(ids);
+    
+    return Result.success();
+  }
+  
+  /**
+   * 根据id查询套餐，用于修改页面回显数据
+   * @param id
+   * @return
+   */
+  @GetMapping
+  @Operation(summary = "根据id查询套餐")
+  public Result<SetmealVO> getById(@RequestParam Long id) {
+    // 根据套餐id查询套餐以及这个套餐包含的菜品
+    SetmealVO setmealVO = setmealService.getSetmealByIdWithDish(id);
+    
+    return Result.success(setmealVO);
+  }
+  
+  /**
+   * 更新套餐
+   * @param setmealDTO 套餐数据传输对象
+   */
+  @PutMapping
+  @Operation(summary = "更新套餐")
+  @CacheEvict(cacheNames = CachePrefixConstant.SETMEAL_KEY, allEntries = true) // 清除所有缓存
+  public Result<?> update(@RequestBody SetmealDTO setmealDTO) {
+    setmealService.update(setmealDTO);
+    
+    return Result.success();
+  }
+  
+  /**
+   * 启动或停止套餐
+   * @param id 套餐ID
+   * @param status 状态，1：起售，0：停售
+   */
+  @PostMapping("/status/{status}")
+  @Operation(summary = "套餐起售停售")
+  @CacheEvict(cacheNames = CachePrefixConstant.SETMEAL_KEY, allEntries = true) // 清除所有缓存
+  public Result<?> startOrStop(@PathVariable("status") Integer status, Long id) {
+    setmealService.startOrStop(id, status);
+    
+    return Result.success();
+  }
+}

@@ -4,262 +4,410 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d07ce823-ecea-4e2c-a83e-9a403cb6ef58" name="Changes" comment="intitial">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="6303db70-7f60-4d25-811e-d09f83a5dae6" name="更改" comment="">
+      <change afterPath="$PROJECT_DIR$/smartcanteen-common/src/main/java/com/holly/utils/GreenTextScan.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/dto/CategoryDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/dto/CommentDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/dto/CouponDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/dto/OrdersPaymentDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/dto/OrdersRejectionDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/dto/OrdersSubmitDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/dto/RecommendRequestDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/dto/ShopInfoDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/dto/ShoppingCartDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/dto/UserDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/dto/UserLoginDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/entity/AddressBook.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/resources/mapper/AddressBookMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wisemunch-common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/wisemunch-common/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wisemunch-pojo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/wisemunch-pojo/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wisemunch-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/wisemunch-server/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/config/LangChain4jConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/config/LangChain4jConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/controller/store/DishController.java" beforeDir="false" afterPath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/controller/store/DishController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/mapper/AddressBookMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/mapper/AddressBookMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/service/impl/AddressBookServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/service/impl/AddressBookServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/service/impl/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/service/impl/OrderServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/resources/mapper/AddressBookMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/wisemunch-server/src/main/resources/mapper/PickupAddressMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-common/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-common/src/main/java/com/holly/aliyun/RiskLabel.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-common/src/main/java/com/holly/aliyun/RiskLabel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-common/src/main/java/com/holly/constant/AutoFillConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-common/src/main/java/com/holly/constant/AutoFillConstant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-common/src/main/java/com/holly/constant/CachePrefixConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-common/src/main/java/com/holly/constant/CachePrefixConstant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-common/src/main/java/com/holly/constant/CommentConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-common/src/main/java/com/holly/constant/CommentConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-common/src/main/java/com/holly/constant/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-common/src/main/java/com/holly/constant/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-common/src/main/java/com/holly/constant/CustomerServiceConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-common/src/main/java/com/holly/constant/CustomerServiceConstant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-common/src/main/java/com/holly/constant/JwtClaimsConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-common/src/main/java/com/holly/constant/JwtClaimsConstant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-common/src/main/java/com/holly/constant/MessageConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-common/src/main/java/com/holly/constant/MessageConstant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-common/src/main/java/com/holly/constant/PasswordConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-common/src/main/java/com/holly/constant/PasswordConstant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-common/src/main/java/com/holly/constant/StatusConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-common/src/main/java/com/holly/constant/StatusConstant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-common/src/main/java/com/holly/context/BaseContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-common/src/main/java/com/holly/context/BaseContext.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-common/src/main/java/com/holly/context/ToolContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-common/src/main/java/com/holly/context/ToolContext.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-common/src/main/java/com/holly/enumeration/BaseEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-common/src/main/java/com/holly/enumeration/BaseEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-common/src/main/java/com/holly/enumeration/ChatEventTypeEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-common/src/main/java/com/holly/enumeration/ChatEventTypeEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-common/src/main/java/com/holly/enumeration/MessageTypeEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-common/src/main/java/com/holly/enumeration/MessageTypeEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-common/src/main/java/com/holly/enumeration/OperationType.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-common/src/main/java/com/holly/enumeration/OperationType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-common/src/main/java/com/holly/exception/AccountLockedException.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-common/src/main/java/com/holly/exception/AccountLockedException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-common/src/main/java/com/holly/exception/AccountNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-common/src/main/java/com/holly/exception/AccountNotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-common/src/main/java/com/holly/exception/AddressBookBusinessException.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-common/src/main/java/com/holly/exception/AddressBookBusinessException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-common/src/main/java/com/holly/exception/AiException.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-common/src/main/java/com/holly/exception/AiException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-common/src/main/java/com/holly/exception/BaseException.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-common/src/main/java/com/holly/exception/BaseException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-common/src/main/java/com/holly/exception/CommentException.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-common/src/main/java/com/holly/exception/CommentException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-common/src/main/java/com/holly/exception/DeletionNotAllowedException.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-common/src/main/java/com/holly/exception/DeletionNotAllowedException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-common/src/main/java/com/holly/exception/DishExecption.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-common/src/main/java/com/holly/exception/DishExecption.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-common/src/main/java/com/holly/exception/FileException.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-common/src/main/java/com/holly/exception/FileException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-common/src/main/java/com/holly/exception/LoginFailedException.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-common/src/main/java/com/holly/exception/LoginFailedException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-common/src/main/java/com/holly/exception/OrderBusinessException.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-common/src/main/java/com/holly/exception/OrderBusinessException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-common/src/main/java/com/holly/exception/PasswordErrorException.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-common/src/main/java/com/holly/exception/PasswordErrorException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-common/src/main/java/com/holly/exception/SetmealEnableFailedException.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-common/src/main/java/com/holly/exception/SetmealEnableFailedException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-common/src/main/java/com/holly/exception/ShoppingCartBusinessException.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-common/src/main/java/com/holly/exception/ShoppingCartBusinessException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-common/src/main/java/com/holly/json/JacksonObjectMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-common/src/main/java/com/holly/json/JacksonObjectMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-common/src/main/java/com/holly/minio/MinioConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-common/src/main/java/com/holly/minio/MinioConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-common/src/main/java/com/holly/properties/AliOssProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-common/src/main/java/com/holly/properties/AliOssProperties.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-common/src/main/java/com/holly/properties/JwtProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-common/src/main/java/com/holly/properties/JwtProperties.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-common/src/main/java/com/holly/properties/MinioProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-common/src/main/java/com/holly/properties/MinioProperties.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-common/src/main/java/com/holly/properties/WeChatProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-common/src/main/java/com/holly/properties/WeChatProperties.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-common/src/main/java/com/holly/result/PageResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-common/src/main/java/com/holly/result/PageResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-common/src/main/java/com/holly/result/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-common/src/main/java/com/holly/result/Result.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-common/src/main/java/com/holly/utils/AliOssUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-common/src/main/java/com/holly/utils/AliOssUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-common/src/main/java/com/holly/utils/GreenTextScan.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-common/src/main/java/com/holly/utils/HttpClientUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-common/src/main/java/com/holly/utils/HttpClientUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-common/src/main/java/com/holly/utils/JwtUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-common/src/main/java/com/holly/utils/JwtUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-common/src/main/java/com/holly/utils/SensitiveWordUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-common/src/main/java/com/holly/utils/SensitiveWordUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-pojo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-pojo/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-pojo/src/main/java/com/holly/dto/AiChatDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/dto/AiChatDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-pojo/src/main/java/com/holly/dto/CategoryDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-pojo/src/main/java/com/holly/dto/CommentDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-pojo/src/main/java/com/holly/dto/CommentLikeDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/dto/CommentLikeDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-pojo/src/main/java/com/holly/dto/CommentRepayDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/dto/CommentRepayDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-pojo/src/main/java/com/holly/dto/CommentRepayLikeDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/dto/CommentRepayLikeDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-pojo/src/main/java/com/holly/dto/CommentRepaySaveDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/dto/CommentRepaySaveDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-pojo/src/main/java/com/holly/dto/CommentSaveDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/dto/CommentSaveDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-pojo/src/main/java/com/holly/dto/CouponDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-pojo/src/main/java/com/holly/dto/CouponPageQueryDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/dto/CouponPageQueryDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-pojo/src/main/java/com/holly/dto/CustomerServiceMessageDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/dto/CustomerServiceMessageDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-pojo/src/main/java/com/holly/dto/DishDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/dto/DishDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-pojo/src/main/java/com/holly/dto/EmployeeDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/dto/EmployeeDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-pojo/src/main/java/com/holly/dto/EmployeeLoginDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/dto/EmployeeLoginDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-pojo/src/main/java/com/holly/dto/GoodsSalesDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/dto/GoodsSalesDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-pojo/src/main/java/com/holly/dto/IsCommentDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/dto/IsCommentDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-pojo/src/main/java/com/holly/dto/OrderCancelDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/dto/OrderCancelDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-pojo/src/main/java/com/holly/dto/OrdersCancelDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/dto/OrdersCancelDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-pojo/src/main/java/com/holly/dto/OrdersDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/dto/OrdersDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-pojo/src/main/java/com/holly/dto/OrdersPaymentDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-pojo/src/main/java/com/holly/dto/OrdersRejectionDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-pojo/src/main/java/com/holly/dto/OrdersSubmitDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-pojo/src/main/java/com/holly/dto/RecommendRequestDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-pojo/src/main/java/com/holly/dto/SetmealDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/dto/SetmealDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-pojo/src/main/java/com/holly/dto/ShopInfoDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-pojo/src/main/java/com/holly/dto/ShoppingCartDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-pojo/src/main/java/com/holly/dto/UserDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-pojo/src/main/java/com/holly/dto/UserLoginDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-pojo/src/main/java/com/holly/entity/AddressBook.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-pojo/src/main/java/com/holly/entity/AiConversationContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/entity/AiConversationContext.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-pojo/src/main/java/com/holly/entity/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/entity/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-pojo/src/main/java/com/holly/entity/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/entity/Comment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-pojo/src/main/java/com/holly/entity/CommentLike.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/entity/CommentLike.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-pojo/src/main/java/com/holly/entity/CommentRepay.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/entity/CommentRepay.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-pojo/src/main/java/com/holly/entity/CommentRepayLike.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/entity/CommentRepayLike.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-pojo/src/main/java/com/holly/entity/Coupon.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/entity/Coupon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-pojo/src/main/java/com/holly/entity/CustomerServiceMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/entity/CustomerServiceMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-pojo/src/main/java/com/holly/entity/CustomerServiceSession.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/entity/CustomerServiceSession.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-pojo/src/main/java/com/holly/entity/DailySequence.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/entity/DailySequence.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-pojo/src/main/java/com/holly/entity/Dish.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/entity/Dish.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-pojo/src/main/java/com/holly/entity/DishFlavor.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/entity/DishFlavor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-pojo/src/main/java/com/holly/entity/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/entity/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-pojo/src/main/java/com/holly/entity/ItemView.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/entity/ItemView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-pojo/src/main/java/com/holly/entity/KnowledgeBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/entity/KnowledgeBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-pojo/src/main/java/com/holly/entity/OrderDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/entity/OrderDetail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-pojo/src/main/java/com/holly/entity/Orders.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/entity/Orders.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-pojo/src/main/java/com/holly/entity/Sensitive.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/entity/Sensitive.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-pojo/src/main/java/com/holly/entity/Setmeal.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/entity/Setmeal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-pojo/src/main/java/com/holly/entity/SetmealDish.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/entity/SetmealDish.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-pojo/src/main/java/com/holly/entity/ShopInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/entity/ShopInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-pojo/src/main/java/com/holly/entity/ShoppingCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/entity/ShoppingCart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-pojo/src/main/java/com/holly/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-pojo/src/main/java/com/holly/entity/UserCoupon.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/entity/UserCoupon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-pojo/src/main/java/com/holly/query/BasePageQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/query/BasePageQuery.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-pojo/src/main/java/com/holly/query/CategoryPageQueryDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/query/CategoryPageQueryDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-pojo/src/main/java/com/holly/query/CommentMessagePageQueryDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/query/CommentMessagePageQueryDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-pojo/src/main/java/com/holly/query/CommentPageQueryDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/query/CommentPageQueryDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-pojo/src/main/java/com/holly/query/DishPageQueryDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/query/DishPageQueryDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-pojo/src/main/java/com/holly/query/EmployeePageQueryDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/query/EmployeePageQueryDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-pojo/src/main/java/com/holly/query/KnowledgeBasePageQueryDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/query/KnowledgeBasePageQueryDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-pojo/src/main/java/com/holly/query/OrdersPageQueryDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/query/OrdersPageQueryDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-pojo/src/main/java/com/holly/query/SensitivePageQueryDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/query/SensitivePageQueryDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-pojo/src/main/java/com/holly/query/SetmealPageQueryDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/query/SetmealPageQueryDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-pojo/src/main/java/com/holly/vo/AiChatResponseVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/vo/AiChatResponseVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-pojo/src/main/java/com/holly/vo/BusinessDataByMapVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/vo/BusinessDataByMapVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-pojo/src/main/java/com/holly/vo/BusinessDataVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/vo/BusinessDataVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-pojo/src/main/java/com/holly/vo/ChatEventVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/vo/ChatEventVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-pojo/src/main/java/com/holly/vo/CommentMessageVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/vo/CommentMessageVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-pojo/src/main/java/com/holly/vo/CommentRepayVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/vo/CommentRepayVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-pojo/src/main/java/com/holly/vo/CommentVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/vo/CommentVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-pojo/src/main/java/com/holly/vo/CouponVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/vo/CouponVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-pojo/src/main/java/com/holly/vo/CustomerServiceSessionVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/vo/CustomerServiceSessionVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-pojo/src/main/java/com/holly/vo/DishItemVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/vo/DishItemVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-pojo/src/main/java/com/holly/vo/DishOverViewVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/vo/DishOverViewVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-pojo/src/main/java/com/holly/vo/DishVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/vo/DishVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-pojo/src/main/java/com/holly/vo/EmployeeLoginVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/vo/EmployeeLoginVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-pojo/src/main/java/com/holly/vo/EmployeeVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/vo/EmployeeVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-pojo/src/main/java/com/holly/vo/IsCommentVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/vo/IsCommentVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-pojo/src/main/java/com/holly/vo/OrderOverViewVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/vo/OrderOverViewVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-pojo/src/main/java/com/holly/vo/OrderReportVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/vo/OrderReportVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-pojo/src/main/java/com/holly/vo/OrderSubmitVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/vo/OrderSubmitVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-pojo/src/main/java/com/holly/vo/OrderVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/vo/OrderVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-pojo/src/main/java/com/holly/vo/SalesTop10ReportVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/vo/SalesTop10ReportVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-pojo/src/main/java/com/holly/vo/SetmealOverViewVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/vo/SetmealOverViewVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-pojo/src/main/java/com/holly/vo/SetmealVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/vo/SetmealVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-pojo/src/main/java/com/holly/vo/ShopInfoVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/vo/ShopInfoVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-pojo/src/main/java/com/holly/vo/TurnoverReportVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/vo/TurnoverReportVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-pojo/src/main/java/com/holly/vo/UserCouponVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/vo/UserCouponVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-pojo/src/main/java/com/holly/vo/UserLoginVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/vo/UserLoginVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-pojo/src/main/java/com/holly/vo/UserReportVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/vo/UserReportVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/WiseMunchApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/SmartCanteenApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/annotation/AutoFill.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/annotation/AutoFill.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/aspect/AutoFillAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/aspect/AutoFillAspect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/chatService/AiCommentExpandServiceAgent.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/chatService/AiCommentExpandServiceAgent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/chatService/AiCommentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/chatService/AiCommentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/chatService/ConsultantService.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/chatService/ConsultantService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/chatService/RecommenAssistantService.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/chatService/RecommenAssistantService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/chatService/SystemChatServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/chatService/SystemChatServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/config/AsyncConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/config/AsyncConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/config/JacksonConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/config/JacksonConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/config/LangChain4jConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/config/LangChain4jConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/config/MyBatisConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/config/MyBatisConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/config/OssConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/config/OssConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/config/RedisConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/config/RedisConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/config/WebMvcConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/config/WebMvcConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/config/WebSocketConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/config/WebSocketConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/constants/MessageConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/constants/MessageConstant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/controller/client/AddressBookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/controller/client/AddressBookController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/controller/client/AiAssistantController.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/controller/client/AiAssistantController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/controller/client/AiCommentExpandController.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/controller/client/AiCommentExpandController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/controller/client/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/controller/client/CategoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/controller/client/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/controller/client/CommentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/controller/client/CommentMessageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/controller/client/CommentMessageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/controller/client/CommentRepayController.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/controller/client/CommentRepayController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/controller/client/CouponController.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/controller/client/CouponController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/controller/client/CustomerServiceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/controller/client/CustomerServiceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/controller/client/DishController.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/controller/client/DishController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/controller/client/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/controller/client/OrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/controller/client/SetmealController.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/controller/client/SetmealController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/controller/client/ShopController.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/controller/client/ShopController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/controller/client/ShopInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/controller/client/ShopInfoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/controller/client/ShoppingCartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/controller/client/ShoppingCartController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/controller/client/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/controller/client/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/controller/client/ViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/controller/client/ViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/controller/store/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/controller/store/CategoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/controller/store/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/controller/store/CommentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/controller/store/CommentReplyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/controller/store/CommentReplyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/controller/store/CouponController.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/controller/store/CouponController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/controller/store/CustomerServiceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/controller/store/CustomerServiceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/controller/store/DishController.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/controller/store/DishController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/controller/store/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/controller/store/EmployeeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/controller/store/KnowledgeBaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/controller/store/KnowledgeBaseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/controller/store/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/controller/store/OrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/controller/store/ReportController.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/controller/store/ReportController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/controller/store/SensitiveController.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/controller/store/SensitiveController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/controller/store/SetmealController.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/controller/store/SetmealController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/controller/store/ShopController.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/controller/store/ShopController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/controller/store/ShopInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/controller/store/ShopInfoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/controller/store/WorkSpaceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/controller/store/WorkSpaceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/controller/upload/UploadController.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/controller/upload/UploadController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/handler/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/handler/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/interceptor/JwtTokenClientInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/interceptor/JwtTokenClientInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/interceptor/JwtTokenStoreInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/interceptor/JwtTokenStoreInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/mapper/AddressBookMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/mapper/AddressBookMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/mapper/CategoryMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/mapper/CategoryMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/mapper/CouponMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/mapper/CouponMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/mapper/CustomerServiceSessionMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/mapper/CustomerServiceSessionMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/mapper/DishFlavorMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/mapper/DishFlavorMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/mapper/DishMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/mapper/DishMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/mapper/EmployeeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/mapper/EmployeeMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/mapper/ItemViewMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/mapper/ItemViewMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/mapper/KnowledgeBaseMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/mapper/KnowledgeBaseMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/mapper/OrderDetailMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/mapper/OrderDetailMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/mapper/OrderMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/mapper/OrderMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/mapper/PickupCodeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/mapper/PickupCodeMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/mapper/SensitiveMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/mapper/SensitiveMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/mapper/SetmealDishMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/mapper/SetmealDishMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/mapper/SetmealMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/mapper/SetmealMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/mapper/ShopInfoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/mapper/ShopInfoMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/mapper/ShoppingCartMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/mapper/ShoppingCartMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/mapper/UserCouponMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/mapper/UserCouponMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/mapper/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/plugins/MyBatisSqlInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/plugins/MyBatisSqlInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/repository/MessageUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/repository/MessageUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/repository/MyAiMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/repository/MyAiMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/repository/MyToolExecutionRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/repository/MyToolExecutionRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/repository/RedisChatMemoryStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/repository/RedisChatMemoryStore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/repository/RedisMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/repository/RedisMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/service/AddressBookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/service/AddressBookService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/service/AiAssistantService.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/service/AiAssistantService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/service/AiCommentExpandService.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/service/AiCommentExpandService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/service/CategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/service/CategoryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/service/CommentMessageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/service/CommentMessageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/service/CommentRepayService.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/service/CommentRepayService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/service/CommentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/service/CommentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/service/CouponService.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/service/CouponService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/service/CustomerServiceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/service/CustomerServiceService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/service/DishService.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/service/DishService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/service/EmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/service/EmployeeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/service/FileService.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/service/FileService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/service/KnowledgeBaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/service/KnowledgeBaseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/service/OrderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/service/PickupCodeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/service/PickupCodeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/service/ReportService.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/service/ReportService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/service/SensitiveService.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/service/SensitiveService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/service/SetmealService.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/service/SetmealService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/service/ShopInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/service/ShopInfoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/service/ShoppingCartService.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/service/ShoppingCartService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/service/UserCouponService.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/service/UserCouponService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/service/ViewService.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/service/ViewService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/service/WorkspaceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/service/WorkspaceService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/service/impl/AddressBookServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/service/impl/AddressBookServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/service/impl/AiAssistantServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/service/impl/AiAssistantServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/service/impl/AiCommentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/service/impl/AiCommentServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/service/impl/CategoryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/service/impl/CategoryServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/service/impl/CommentMessageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/service/impl/CommentMessageServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/service/impl/CommentRepayServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/service/impl/CommentRepayServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/service/impl/CommentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/service/impl/CommentServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/service/impl/CouponServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/service/impl/CouponServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/service/impl/CustomerServiceServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/service/impl/CustomerServiceServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/service/impl/DishServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/service/impl/DishServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/service/impl/EmployeeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/service/impl/EmployeeServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/service/impl/FileServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/service/impl/FileServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/service/impl/KnowledgeBaseServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/service/impl/KnowledgeBaseServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/service/impl/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/service/impl/OrderServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/service/impl/PickupCodeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/service/impl/PickupCodeServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/service/impl/ReportServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/service/impl/ReportServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/service/impl/SensitiveServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/service/impl/SensitiveServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/service/impl/SetmealServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/service/impl/SetmealServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/service/impl/ShopInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/service/impl/ShopInfoServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/service/impl/ShoppingCartServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/service/impl/ShoppingCartServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/service/impl/UserCouponServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/service/impl/UserCouponServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/service/impl/ViewServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/service/impl/ViewServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/service/impl/WorkspaceServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/service/impl/WorkspaceServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/task/OrderTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/task/OrderTask.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/task/WebSocketTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/task/WebSocketTask.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/tools/DishRecommendTool.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/tools/DishRecommendTool.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/tools/OrderTool.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/tools/OrderTool.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/tools/result/ToolResultHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/tools/result/ToolResultHolder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/websocket/CustomerServiceWebSocketServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/websocket/CustomerServiceWebSocketServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/websocket/WebSocketServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/websocket/WebSocketServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/dev/langchain4j/store/embedding/MyEmbeddingStoreIngestor.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/dev/langchain4j/store/embedding/MyEmbeddingStoreIngestor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/java/dev/langchain4j/store/embedding/MyIngestionResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/dev/langchain4j/store/embedding/MyIngestionResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/resources/AiComment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/resources/AiComment.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/resources/Consultant.txt" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/resources/Consultant.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/resources/RecommentAssistant.txt" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/resources/RecommentAssistant.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/resources/banner.txt" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/resources/banner.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/resources/comment-chat-message.txt" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/resources/comment-chat-message.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/resources/mapper/CategoryMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/resources/mapper/CategoryMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/resources/mapper/CouponMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/resources/mapper/CouponMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/resources/mapper/DailySequenceMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/resources/mapper/DailySequenceMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/resources/mapper/DishFlavorMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/resources/mapper/DishFlavorMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/resources/mapper/DishMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/resources/mapper/DishMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/resources/mapper/EmployeeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/resources/mapper/EmployeeMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/resources/mapper/KnowledgeBaseMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/resources/mapper/KnowledgeBaseMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/resources/mapper/OrderDetailMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/resources/mapper/OrderDetailMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/resources/mapper/OrderMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/resources/mapper/OrderMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/resources/mapper/PickupAddressMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/resources/mapper/PickupAddressMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/resources/mapper/SensitiveMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/resources/mapper/SensitiveMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/resources/mapper/SetmealDishMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/resources/mapper/SetmealDishMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/resources/mapper/SetmealMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/resources/mapper/SetmealMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/resources/mapper/ShopInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/resources/mapper/ShopInfoMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/resources/mapper/ShoppingCartMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/resources/mapper/ShoppingCartMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/resources/mapper/UserCouponMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/resources/mapper/UserCouponMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/resources/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/resources/mapper/UserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/resources/repay-comment-chat-message.txt" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/resources/repay-comment-chat-message.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/resources/system-chat-message.txt" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/resources/system-chat-message.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/resources/template/websocket.html" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/resources/template/websocket.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wisemunch-server/src/main/resources/template/运营数据报表模板.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/resources/template/运营数据报表模板.xlsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
 }</component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
-  </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="mavenHome" value="使用 Maven 包装器" />
-        <option name="userSettingsFile" value="C:\Users\16066\.m2\settings.xml" />
-      </MavenGeneralSettings>
-    </option>
-  </component>
   <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 7
 }</component>
-  <component name="ProjectId" id="35ixJsPMb2UlcvDwz4oNXEiurBg" />
+  <component name="ProjectId" id="38YhNekTgFtx1uAf1pZOH7Q9dgA" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
-    &quot;Maven.wisemunch-server [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.wisemunch-server [install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.wisemunch-server [validate].executor&quot;: &quot;Run&quot;,
     &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
     &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
     &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
     &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Spring Boot.WiseMunchApplication.executor&quot;: &quot;Debug&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;Spring Boot.SmartCanteenApplication.executor&quot;: &quot;Debug&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;I:/Java/ali_repo/com/aliyun/oss/aliyun-sdk-oss/3.10.2/aliyun-sdk-oss-3.10.2.jar&quot;,
+    &quot;last_opened_file_path&quot;: &quot;J:/Spring/smart_canteen/smartcanteen-backend&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;SDK&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;252c28eb11e2eff5ad6a74214e85d4cf&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;项目&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
-  <component name="RecentsManager">
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.holly.service.impl" />
-      <recent name="com.holly.service" />
-      <recent name="com.holly.controller.client" />
-    </key>
-  </component>
   <component name="RunManager">
-    <configuration name="WiseMunchApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="wisemunch-server" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.holly.WiseMunchApplication" />
+    <configuration name="SmartCanteenApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="smartcanteen-server" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.holly.SmartCanteenApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="d07ce823-ecea-4e2c-a83e-9a403cb6ef58" name="Changes" comment="" />
-      <created>1763606626000</created>
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="6303db70-7f60-4d25-811e-d09f83a5dae6" name="更改" comment="" />
+      <created>1768982376471</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1763606626000</updated>
-      <workItem from="1763606631930" duration="1892000" />
-      <workItem from="1763610424755" duration="9170000" />
-      <workItem from="1765952883705" duration="6251000" />
-      <workItem from="1765965430825" duration="5760000" />
-      <workItem from="1765980030198" duration="3794000" />
-      <workItem from="1765987647180" duration="17000" />
-      <workItem from="1766504132246" duration="679000" />
-      <workItem from="1766546696284" duration="601000" />
-      <workItem from="1766723613561" duration="1969000" />
-      <workItem from="1766730016317" duration="532000" />
-      <workItem from="1767533624911" duration="8498000" />
-      <workItem from="1767604820502" duration="4901000" />
-      <workItem from="1767620139994" duration="959000" />
-      <workItem from="1767621162992" duration="766000" />
-      <workItem from="1767621949672" duration="3623000" />
-      <workItem from="1767699585166" duration="7121000" />
-      <workItem from="1767709150914" duration="221000" />
-      <workItem from="1767709404667" duration="888000" />
+      <updated>1768982376471</updated>
+      <workItem from="1768982377862" duration="70000" />
+      <workItem from="1768982509081" duration="6526000" />
+      <workItem from="1769072778656" duration="2284000" />
     </task>
-    <task id="LOCAL-00001" summary="Changes">
-      <option name="closed" value="true" />
-      <created>1765976513808</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1765976513808</updated>
-    </task>
-    <task id="LOCAL-00002" summary="intitial">
-      <option name="closed" value="true" />
-      <created>1765978326175</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1765978326175</updated>
-    </task>
-    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="HEAD" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Changes" />
-    <MESSAGE value="intitial" />
-    <option name="LAST_COMMIT_MESSAGE" value="intitial" />
-  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/controller/store/DishController.java</url>
-          <line>45</line>
-          <option name="timeStamp" value="1" />
+          <url>file://$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/controller/client/AddressBookController.java</url>
+          <line>47</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/wisemunch-common/src/main/java/com/holly/utils/AliOssUtil.java</url>
-          <line>81</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/service/impl/FileServiceImpl.java</url>
-          <line>85</line>
-          <option name="timeStamp" value="18" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/service/impl/KnowledgeBaseServiceImpl.java</url>
-          <line>77</line>
-          <option name="timeStamp" value="19" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/controller/client/DishController.java</url>
-          <line>79</line>
-          <properties class="com.holly.controller.client.DishController" method="getDish">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/service/impl/FileServiceImpl.java</url>
-          <line>95</line>
-          <properties class="com.holly.service.impl.FileServiceImpl" method="deleteFileMinio">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/wisemunch-server/src/main/java/com/holly/service/impl/KnowledgeBaseServiceImpl.java</url>
-          <line>160</line>
-          <properties class="com.holly.service.impl.KnowledgeBaseServiceImpl" method="deleteByIds">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/wisemunch-common/src/main/java/com/holly/utils/SensitiveWordUtil.java</url>
-          <line>15</line>
-          <properties class="com.holly.utils.SensitiveWordUtil" method="initMap">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="22" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/wisemunch-common/src/main/java/com/holly/utils/SensitiveWordUtil.java</url>
-          <line>59</line>
-          <properties class="com.holly.utils.SensitiveWordUtil" method="checkWord">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="23" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/wisemunch-common/src/main/java/com/holly/utils/SensitiveWordUtil.java</url>
-          <line>92</line>
-          <properties class="com.holly.utils.SensitiveWordUtil" method="matchWords">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="24" />
+          <url>file://$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/service/impl/AddressBookServiceImpl.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
