@@ -26,7 +26,7 @@ public class ShopInfoServiceImpl implements ShopInfoService {
   private final ShopInfoMapper shopInfoMapper;
   
   @Override
-  @Cacheable(key = "'info'")
+  @Cacheable(key = "'info'")//当你在 key 中写 "info"（没有单引号）时，Spring 会认为这是一个 SpEL 表达式。
   public ShopInfoVO getShopInfo() {
     ShopInfo shopInfo = shopInfoMapper.selectDefaultShop();
     return convertToVO(shopInfo);

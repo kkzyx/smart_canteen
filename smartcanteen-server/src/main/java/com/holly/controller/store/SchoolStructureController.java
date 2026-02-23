@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @Slf4j
-@RestController
+@RestController("storeSchoolStructureController") // 手动起个独特的名字
 @RequestMapping("/school")
 @RequiredArgsConstructor
 @Tag(name = "学校结构管理", description = "提供学校、校区、楼栋的三级联动数据接口")

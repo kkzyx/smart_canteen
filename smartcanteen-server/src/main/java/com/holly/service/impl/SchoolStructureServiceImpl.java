@@ -20,13 +20,13 @@ import java.util.stream.Collectors;
 @Slf4j
 @Service
 @RequiredArgsConstructor
-//@CacheConfig(cacheNames = "school::tree")
+//@CacheConfig(cacheNames = "school:tree")
 public class SchoolStructureServiceImpl implements SchoolStructureService {
 
     private final SchoolStructureMapper mapper;
 
-    @Autowired
-    private RedisTemplate<String, Object> redisTemplate;
+
+    private final RedisTemplate<String, Object> redisTemplate;
 
     private static final String CACHE_KEY = "school:tree";
 
@@ -76,6 +76,11 @@ public class SchoolStructureServiceImpl implements SchoolStructureService {
     public void deleteNode(Long id) {
         mapper.deleteById(id);
         redisTemplate.delete(CACHE_KEY);
+    }
+
+    @Override
+    public List<SchoolStructure> getByParentId(Long parentId) {
+        return null;
     }
 
     // 递归构建树

@@ -39,7 +39,7 @@ public class SetmealController {
     @GetMapping("/list")
     @Operation(summary = "根据分类id查询套餐")
     // 每次查询套餐都进行缓存，如果缓存中存在，则直接返回缓存，否则查询数据库，并将返回结果缓存到redis中
-    @Cacheable(cacheNames = CachePrefixConstant.SETMEAL_KEY, key = "#categoryId+" + "_" + "+tabIndex")
+    @Cacheable(cacheNames = CachePrefixConstant.SETMEAL_KEY, key = "#categoryId + '_' + #tabIndex")
     public Result<List<Setmeal>> list(@RequestParam(value = "categoryId", required = false) Long categoryId, @RequestParam("tabIndex") Integer tabIndex) {
         Setmeal setmeal = new Setmeal();
         setmeal.setCategoryId(categoryId);

@@ -8,6 +8,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
+import java.time.LocalDateTime;
 import java.util.List;
 
 /**
@@ -27,4 +28,7 @@ public class OrderVO  extends Orders implements Serializable {
 
   @Schema(description = "订单类型名称")
   private String orderTypeName;
+
+  @Schema(description = "预计取餐时间")
+  private LocalDateTime estimatedPickupTime;
 }

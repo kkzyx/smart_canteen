@@ -1,5 +1,6 @@
 package com.holly.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -110,6 +111,9 @@ public class Orders implements Serializable {
   
   @Schema(description = "预计送达时间")
   private LocalDateTime estimatedDeliveryTime;
+
+  @Schema(description = "预计取餐时间")
+  private LocalDateTime estimatedPickupTime;
   
   @Schema(description = "配送状态  1立即送出  0选择具体时间")
   private Integer deliveryStatus;

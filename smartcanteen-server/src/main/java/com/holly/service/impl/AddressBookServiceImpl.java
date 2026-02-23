@@ -24,13 +24,13 @@ public class AddressBookServiceImpl implements AddressBookService {
   
   @Override
   public List<AddressBook> list(AddressBook addressBook) {
-    // TODO: 获取地址列表分页前端后mapperxml待修改
+
     return addressBookMapper.list(addressBook);
   }
   
   @Override
   public void save(AddressBook addressBook) {
-//    addressBook.setUserId(BaseContext.getUserId());
+    addressBook.setUserId(BaseContext.getUserId());
     
     // 当前新增地址是否设置了为默认地址
     boolean isDefault = Optional.ofNullable(addressBook.getIsDefault())

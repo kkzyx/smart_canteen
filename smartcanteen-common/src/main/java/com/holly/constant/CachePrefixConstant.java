@@ -20,4 +20,7 @@ public class CachePrefixConstant {
    * 缓存用户订单前缀key
    */
   public static final String USER_ORDER = "user:orders:";
+
+  /** 缓存ai采购建议前缀key */
+  public static final String AI_PURCHASE_ADVICE = "ai_purchase_advice:";
 }

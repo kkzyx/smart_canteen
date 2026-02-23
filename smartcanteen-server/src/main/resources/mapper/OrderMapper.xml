@@ -7,11 +7,11 @@
 	<insert id="insert" parameterType="com.holly.entity.Orders" useGeneratedKeys="true" keyProperty="id">
 		insert into `orders` (`number`, `status`, `user_id`, `address_book_id`, `order_time`, `checkout_time`, `pay_method`,
 		                      `pay_status`,
-		                      `amount`, `remark`, `phone`, `address`, `consignee`, `estimated_delivery_time`,
+		                      `amount`, `remark`, `phone`, `address`, `consignee`, `estimated_delivery_time`,`estimated_pickup_time`,
 		                      `delivery_status`,
 		                      `pack_amount`, `tableware_number`, `tableware_status`, `order_type`, `pickup_number`)
 		values (#{number}, #{status}, #{userId}, #{addressBookId}, #{orderTime}, #{checkoutTime}, #{payMethod},
-		        #{payStatus}, #{amount}, #{remark}, #{phone}, #{address}, #{consignee}, #{estimatedDeliveryTime},
+		        #{payStatus}, #{amount}, #{remark}, #{phone}, #{address}, #{consignee}, #{estimatedDeliveryTime},#{estimatedPickupTime},
 		        #{deliveryStatus}, #{packAmount}, #{tablewareNumber}, #{tablewareStatus}, #{orderType}, #{pickupNumber})
 	</insert>
 	
@@ -36,6 +36,9 @@
 			</if>
 			<if test="endTime != null">
 				and `order_time` &lt;= #{endTime}
+			</if>
+			<if test="orderType != null">
+				and order_type = #{orderType}
 			</if>
 		</where>
 		order by `order_time` desc
@@ -141,7 +144,29 @@
 		order by `number` desc
 		limit 0, 10
 	</select>
-	
+	<select id="getSalesStatistics" resultType="com.holly.dto.DishSalesDTO">
+		select
+		od.name,
+		sum(od.number) as quantity
+		from
+		order_detail od
+		left join
+		orders o on od.order_id = o.id
+		<where>
+			<if test="begin != null">
+				and o.order_time &gt;= #{begin}
+			</if>
+			<if test="end != null">
+				and o.order_time &lt;= #{end}
+			</if>
+			and o.status = 5
+		</where>
+		group by
+		od.name
+		order by
+		quantity desc
+	</select>
+
 	<!-- 批量更新订单状态 -->
 	<update id="updateOrdersStatus">
 		update `orders`

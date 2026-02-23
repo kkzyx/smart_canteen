@@ -40,4 +40,7 @@ public class OrdersPageQueryDTO extends BasePageQuery implements Serializable {
   
   @Schema(description = "用户id")
   private Long userId;
+
+  @Schema(description = "订单类型 1堂食 2外卖")
+  private Integer orderType; // [新增]
 }

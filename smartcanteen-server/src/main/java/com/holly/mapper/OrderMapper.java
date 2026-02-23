@@ -1,6 +1,7 @@
 package com.holly.mapper;
 
 import com.holly.annotation.AutoFill;
+import com.holly.dto.DishSalesDTO;
 import com.holly.dto.GoodsSalesDTO;
 import com.holly.entity.Orders;
 import com.holly.enumeration.OperationType;
@@ -10,6 +11,7 @@ import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Map;
@@ -42,7 +44,8 @@ public interface OrderMapper {
      *
      * @param orders 订单实体类
      */
-    @AutoFill(OperationType.UPDATE)
+    //TODO 注释AutoFill
+//    @AutoFill(OperationType.UPDATE)
     void update(Orders orders);
 
     /**
@@ -126,4 +129,10 @@ public interface OrderMapper {
      * @param order     订单实体类
      */
     void updateOrdersStatus(@Param("orderList") List<Orders> orderList, @Param("order") Orders order);
+
+    // OrderMapper.java
+    List<DishSalesDTO> getSalesStatistics(
+            @Param("begin") LocalDateTime begin,
+            @Param("end") LocalDateTime end
+    );
 }

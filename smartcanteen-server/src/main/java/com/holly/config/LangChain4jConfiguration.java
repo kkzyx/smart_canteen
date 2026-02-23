@@ -1,5 +1,6 @@
 package com.holly.config;
 
+import com.holly.chatService.AiPurchaseAdviceService;
 import com.holly.chatService.ConsultantService;
 import com.holly.repository.RedisChatMemoryStore;
 import com.holly.tools.DishRecommendTool;
@@ -80,7 +81,18 @@ public class LangChain4jConfiguration {
         
         return builder.build();
     }
-
+    /**
+     * 构建食材采购建议服务
+     */
+//    @Bean
+//    public AiPurchaseAdviceService aiPurchaseAdviceService(
+//            OpenAiStreamingChatModel openAiStreamingChatModel) {
+//
+//        return AiServices.builder(AiPurchaseAdviceService.class)
+//                // ⭐ 核心：必须设置流式模型，这样接口返回 TokenStream 才不会报错
+//                .streamingChatModel(openAiStreamingChatModel)
+//                .build();
+//    }
     //mcp服务
 //    @Bean
 //    public McpToolProvider toolProvider() {
