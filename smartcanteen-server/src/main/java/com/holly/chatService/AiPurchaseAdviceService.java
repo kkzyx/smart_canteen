@@ -63,14 +63,6 @@ public interface AiPurchaseAdviceService {
         """)
     String getAdviceSync(@UserMessage String salesData, @V("day") String day);
 
-    @SystemMessage("""
-        你是一位餐饮供应链专家。请分析 {day} 的菜品销量并输出“次日采购报告”。
-        必须严格返回 JSON 格式，字段如下：
-        1. summary: (String) 统计卖出的具体菜品和份数。
-        2. purchaseList: (Array) 包含 ingredient, amount, unit, reason。
-        
-        换算规则：1颗菜心做2份；3颗上海青做1份；1份小炒肉需150g五花肉。
-        冗余与取整：增加10%冗余后，所有数量向上取整。
-        """)
+    @SystemMessage(fromResource = "PurchaseRecommend.txt")
     AiPurchaseReportVO getReport(@UserMessage String salesData, @V("day") String day);
     }

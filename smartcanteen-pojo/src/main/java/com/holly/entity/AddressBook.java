@@ -33,25 +33,6 @@ public class AddressBook implements Serializable {
   
   @Schema(description = "性别 0 女 1 男")
   private String sex;
-  
-  @Schema(description = "省级区划编号")
-  private String provinceCode;
-  
-  @Schema(description = "省级名称")
-  private String provinceName;
-  
-  @Schema(description = "市级区划编号")
-  private String cityCode;
-  
-  @Schema(description = "市级名称")
-  private String cityName;
-  
-  @Schema(description = "区级区划编号")
-  private String districtCode;
-  
-  @Schema(description = "区级名称")
-  private String districtName;
-
   /*
     * 新增变量，schoolCode、schoolName、campusCode、campusName、dormitoryCode、dormitoryName、roomNum
    */

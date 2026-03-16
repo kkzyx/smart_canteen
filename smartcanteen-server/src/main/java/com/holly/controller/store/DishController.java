@@ -39,14 +39,6 @@ public class DishController {
   public Result<?> save(@RequestBody DishDTO dishDTO) {
     log.info("新增菜品信息==> {}", dishDTO);
     dishService.saveWithFlavors(dishDTO);
-    String tabIndexKey1 = CachePrefixConstant.DISH_KEY + dishDTO.getCategoryId() + "_" + 0;//0表示未起售
-    String tabIndexKey2 = CachePrefixConstant.DISH_KEY + dishDTO.getCategoryId() + "_" + 1;//1表示起售
-    String recommentKey = CachePrefixConstant.RECOMMEND_DISH_KEY;//推荐菜品
-    // 新增菜品时，清除缓存菜品数据
-    clearCache(tabIndexKey1);
-    clearCache(tabIndexKey2);
-    clearCache(recommentKey);
-    
     return Result.success();
   }
   
@@ -71,9 +63,6 @@ public class DishController {
   public Result<?> delete(@RequestParam List<Long> ids) {
     log.info("批量删除菜品，ids==> {}", ids);
     dishService.deleteBatch(ids);
-    // 删除所有以`dish_`为前缀的菜品缓存数据
-    clearCache(CachePrefixConstant.DISH_KEY + "*");
-    clearCache(CachePrefixConstant.RECOMMEND_DISH_KEY);
     return Result.success();
   }
   
@@ -98,8 +87,6 @@ public class DishController {
   public Result<?> update(@RequestBody DishDTO dishDTO) {
     log.info("更新菜品信息==> {}", dishDTO);
     dishService.updateWithFlavors(dishDTO);
-    clearCache(CachePrefixConstant.DISH_KEY + "*");
-    clearCache(CachePrefixConstant.RECOMMEND_DISH_KEY);
     return Result.success();
   }
   
@@ -112,7 +99,6 @@ public class DishController {
   @Operation(summary = "菜品起售停售")
   public Result<String> startOrStop(@PathVariable("status") Integer status, Long id) {
     dishService.startOrStop(status, id);
-    clearCache(CachePrefixConstant.DISH_KEY + "*");
     return Result.success();
   }
   
@@ -120,10 +106,5 @@ public class DishController {
    * 清理redis中的缓存数据
    * @param pattern 缓存key
    */
-  private void clearCache(String pattern) {
-    Set<String> keys = redisTemplate.keys(pattern);
-    if (keys != null && keys.size() > 0) {
-      redisTemplate.delete(keys);
-    }
-  }
+
 }

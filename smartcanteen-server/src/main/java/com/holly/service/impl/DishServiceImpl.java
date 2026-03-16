@@ -1,5 +1,6 @@
 package com.holly.service.impl;
 
+import com.holly.constant.CachePrefixConstant;
 import com.holly.constant.MessageConstant;
 import com.holly.constant.StatusConstant;
 import com.holly.dto.DishDTO;
@@ -18,11 +19,15 @@ import com.github.pagehelper.PageHelper;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
+import java.util.Set;
+import java.util.concurrent.TimeUnit;
 
 import static com.holly.constant.MessageConstant.INVALID_PARAM;
 
@@ -41,6 +46,40 @@ public class DishServiceImpl implements DishService {
     private final SetmealDishMapper setmealDishMapper;
     private final FileServiceImpl fileService;
     private final ViewService viewService;
+    private final RedisTemplate<String,Object> redisTemplate;
+    @Override
+    public List<DishVO> listWithCache(Long categoryId, Integer tabIndex) {
+        // 1. 构建目录化的 Key 结构：dish:list:categoryId_tabIndex
+        // 这样在 Redis 客户端中会显示为 dish -> list -> 具体文件
+        String key = CachePrefixConstant.DISH_KEY+ (categoryId == null ? "all" : categoryId) + "_tab" + tabIndex;
+
+        // 2. 查询缓存
+        List<DishVO> cacheList = (List<DishVO>)redisTemplate.opsForValue().get(key);
+        if (cacheList != null && !cacheList.isEmpty()) {
+            log.info("查询到 Redis 缓存，直接返回: {}", key);
+            return cacheList;
+        }
+
+        // 3. 缓存不存在，查询数据库
+        Dish dish = new Dish();
+        dish.setCategoryId(categoryId);
+        dish.setStatus(StatusConstant.ENABLE);
+
+        // 调用原有的 listWithFlavors 方法获取基础数据
+        List<DishVO> list = listWithFlavors(dish);
+
+        // 4. 根据 tabIndex 处理逻辑
+        if (tabIndex != 0) {
+            // 热度菜品：根据热度排序（从高到低）
+            list.sort(Comparator.comparing(DishVO::getHotSpot,
+                    Comparator.nullsLast(Comparator.reverseOrder())));
+        }
+
+        // 5. 存入 Redis 并设置过期时间（建议设置过期时间防止脏数据长期驻留）
+        redisTemplate.opsForValue().set(key, list, 60, TimeUnit.MINUTES);
+
+        return list;
+    }
 
     @Transactional
     @Override
@@ -59,6 +98,7 @@ public class DishServiceImpl implements DishService {
             flavors.forEach(flavor -> flavor.setDishId(dishId));
             dishFlavorMapper.insertBatch(flavors);
         }
+        this.cleanAllDishCache();
     }
 
     @Override
@@ -102,6 +142,7 @@ public class DishServiceImpl implements DishService {
 //                fileService.deleteFileAliOss(image);
             }
         });
+        this.cleanAllDishCache();
     }
 
     @Override
@@ -139,6 +180,7 @@ public class DishServiceImpl implements DishService {
             flavors.forEach(flavor -> flavor.setDishId(dishDTO.getId()));
             dishFlavorMapper.insertBatch(flavors);
         }
+        this.cleanAllDishCache();
     }
 
     @Transactional
@@ -160,6 +202,8 @@ public class DishServiceImpl implements DishService {
         List<Long> setmealIds = setmealDishMapper.getSetmealDishByDishIds(dishIds);
         if (setmealIds.size() == 0) return;
         setmealMapper.batchUpdateStatus(setmealIds, StatusConstant.DISABLE);
+        // 清理缓存
+        this.cleanAllDishCache();
     }
 
     @Override
@@ -192,4 +236,32 @@ public class DishServiceImpl implements DishService {
         return dishVOList;
     }
 
+    @Override
+    public List<DishVO> listRecommendWithCache() {
+        String key = CachePrefixConstant.RECOMMEND_DISH_KEY;
+        //从redis中查询是否有推荐菜品
+        List<DishVO> dishVOS = (List<DishVO>) redisTemplate.opsForValue().get(key);
+        if (dishVOS != null && !dishVOS.isEmpty()) {
+          return dishVOS;
+        }
+        //没有缓存查询数据库
+        Dish dish = new Dish();
+        List<DishVO> list = listWithFlavors(dish);
+        List<DishVO> fourDish = list.subList(0, Math.min(list.size(), 4));
+        //存入缓存
+        redisTemplate.opsForValue().set(key, fourDish);
+        return fourDish;
+    }
+    // 抽取一个统一的清理方法，避免到处写字符串拼接
+    private void cleanAllDishCache() {
+        clearCache("dish:*");     // 清理所有菜品相关（列表、推荐等）
+        clearCache("setmealCache:*");  // 清理套餐（因为菜品变了，套餐数据可能也过期了）
+    }
+    private void clearCache(String pattern) {
+        Set<String> keys = redisTemplate.keys(pattern);
+        if (keys != null && keys.size() > 0) {
+            redisTemplate.delete(keys);
+            log.info("清理缓存成功，pattern：{}", pattern);
+        }
+    }
 }

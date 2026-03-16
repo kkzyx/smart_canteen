@@ -33,7 +33,6 @@ public class AiController {
     private final OrderMapper orderMapper;
 
 
-    private final AiPurchaseAdviceService aiPurchaseAdviceService;
 
     /**
      * 获取指定日期的AI采购建议报告

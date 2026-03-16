@@ -12,7 +12,8 @@ import java.util.List;
  * @description
  */
 public interface DishService {
-  
+
+  List<DishVO> listWithCache(Long categoryId,Integer tabIndex);
   /**
    * 保存菜品
    * @param dishDTO 菜品数据传输对象
@@ -58,4 +59,6 @@ public interface DishService {
    * @return 菜品数据
    */
   List<DishVO> listWithFlavors(Dish dish);
+
+  List<DishVO> listRecommendWithCache();
 }

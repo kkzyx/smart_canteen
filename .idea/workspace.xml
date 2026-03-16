@@ -4,31 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6303db70-7f60-4d25-811e-d09f83a5dae6" name="更改" comment="#feature: 新增学校结构树缓存">
+    <list default="true" id="6303db70-7f60-4d25-811e-d09f83a5dae6" name="更改" comment="#feature: 修改地址逻辑，新增ai功能">
       <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/dto/DishSalesDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/vo/AiPurchaseAdviceVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/vo/AiPurchaseReportVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/vo/SchoolTreeVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/chatService/AiPurchaseAdviceService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/controller/client/SchoolStructureController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/controller/store/AiController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/service/impl/AiPurchaseServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/resources/PurchaseRecommend.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/smartcanteen-common/src/main/java/com/holly/constant/CachePrefixConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-common/src/main/java/com/holly/constant/CachePrefixConstant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/dto/OrdersSubmitDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/dto/OrdersSubmitDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/entity/Orders.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/entity/Orders.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/query/OrdersPageQueryDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/query/OrdersPageQueryDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/vo/OrderVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/vo/OrderVO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/SmartCanteenApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/SmartCanteenApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/config/LangChain4jConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/config/LangChain4jConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/controller/client/SetmealController.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/controller/client/SetmealController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/controller/store/SchoolStructureController.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/controller/store/SchoolStructureController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/mapper/OrderMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/mapper/OrderMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/service/impl/AddressBookServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/service/impl/AddressBookServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/service/impl/SchoolStructureServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/service/impl/SchoolStructureServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/service/impl/ShopInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/service/impl/ShopInfoServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/smartcanteen-server/src/main/resources/mapper/OrderMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/resources/mapper/OrderMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/entity/AddressBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-pojo/src/main/java/com/holly/entity/AddressBook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/chatService/AiPurchaseAdviceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/chatService/AiPurchaseAdviceService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/config/RedisConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/config/RedisConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/controller/client/DishController.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/controller/client/DishController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/controller/store/AiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/controller/store/AiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/controller/store/DishController.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/controller/store/DishController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/mapper/AddressBookMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/mapper/AddressBookMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/service/DishService.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/service/DishService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/service/impl/DishServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/service/impl/DishServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smartcanteen-server/src/main/resources/Consultant.txt" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/resources/Consultant.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smartcanteen-server/src/main/resources/system-chat-message.txt" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/resources/system-chat-message.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +52,7 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Docker.docker-compose.yml: Compose 部署.executor&quot;: &quot;Run&quot;,
     &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
     &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
     &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
@@ -70,7 +62,7 @@
     &quot;Spring Boot.SmartCanteenApplication.executor&quot;: &quot;Debug&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;J:/Spring/smart_canteen/smartcanteen-backend&quot;,
+    &quot;last_opened_file_path&quot;: &quot;J:/Spring/smart_canteen/smartcanteen-backend/smartcanteen-server/src/main/resources&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -79,7 +71,7 @@
     &quot;project.structure.last.edited&quot;: &quot;项目&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -87,11 +79,14 @@
     <option name="notificationShown" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="J:\Spring\smart_canteen\smartcanteen-backend\smartcanteen-server\src\main\resources" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.holly.vo" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.SmartCanteenApplication">
     <configuration name="SmartCanteenApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="smartcanteen-server" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.holly.SmartCanteenApplication" />
@@ -99,6 +94,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml: Compose 部署" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Docker.docker-compose.yml: Compose 部署" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -119,7 +133,13 @@
       <workItem from="1770557099915" duration="2634000" />
       <workItem from="1771141387813" duration="19586000" />
       <workItem from="1771593106906" duration="1429000" />
-      <workItem from="1771770101824" duration="9689000" />
+      <workItem from="1771770101824" duration="16958000" />
+      <workItem from="1772973073188" duration="21221000" />
+      <workItem from="1773128940671" duration="3793000" />
+      <workItem from="1773198949974" duration="341000" />
+      <workItem from="1773199541479" duration="651000" />
+      <workItem from="1773329900153" duration="697000" />
+      <workItem from="1773393844934" duration="2906000" />
     </task>
     <task id="LOCAL-00001" summary="重命名">
       <option name="closed" value="true" />
@@ -137,7 +157,15 @@
       <option name="project" value="LOCAL" />
       <updated>1769094036072</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="#feature: 修改地址逻辑，新增ai功能">
+      <option name="closed" value="true" />
+      <created>1771848191909</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1771848191909</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -146,7 +174,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="重命名" />
     <MESSAGE value="#feature: 新增学校结构树缓存" />
-    <option name="LAST_COMMIT_MESSAGE" value="#feature: 新增学校结构树缓存" />
+    <MESSAGE value="#feature: 修改地址逻辑，新增ai功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="#feature: 修改地址逻辑，新增ai功能" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -157,19 +186,19 @@
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/service/impl/SchoolStructureServiceImpl.java</url>
-          <line>51</line>
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/controller/client/OrderController.java</url>
-          <line>36</line>
-          <option name="timeStamp" value="21" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/service/impl/OrderServiceImpl.java</url>
           <line>427</line>
           <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/service/impl/CommentServiceImpl.java</url>
+          <line>227</line>
+          <option name="timeStamp" value="50" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/service/impl/ShopInfoServiceImpl.java</url>
+          <line>49</line>
+          <option name="timeStamp" value="57" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/service/impl/OrderServiceImpl.java</url>
@@ -206,6 +235,42 @@
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="47" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/service/impl/OrderServiceImpl.java</url>
+          <line>368</line>
+          <properties class="com.holly.service.impl.OrderServiceImpl" method="handleTakeawayOrder">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="51" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/service/impl/OrderServiceImpl.java</url>
+          <line>438</line>
+          <properties class="com.holly.service.impl.OrderServiceImpl" method="createTakeawayOrder">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="52" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/service/impl/OrderServiceImpl.java</url>
+          <line>462</line>
+          <properties class="com.holly.service.impl.OrderServiceImpl" method="buildSubmitResult">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="53" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/service/impl/PickupCodeServiceImpl.java</url>
+          <line>68</line>
+          <properties class="com.holly.service.impl.PickupCodeServiceImpl" method="saveCode">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="58" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

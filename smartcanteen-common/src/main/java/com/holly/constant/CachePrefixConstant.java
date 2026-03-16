@@ -6,7 +6,7 @@ package com.holly.constant;
 public class CachePrefixConstant {
   
   /** 缓存菜品前缀key */
-  public static final String DISH_KEY = "dish_";
+  public static final String DISH_KEY = "dish:dish_";
   
   /** 缓存套餐前缀key */
   public static final String SETMEAL_KEY = "setmealCache";
@@ -14,7 +14,7 @@ public class CachePrefixConstant {
   /**
    * 缓存推荐菜品前缀key
    */
-  public static final String RECOMMEND_DISH_KEY = "recommendDish_";
+  public static final String RECOMMEND_DISH_KEY = "dish:recommendDish_";
 
   /**
    * 缓存用户订单前缀key

@@ -35,11 +35,11 @@ public interface AddressBookMapper {
 //          "`city_code`, `city_name`, `district_code`, `district_name`, `detail`, `label`, `is_default`) values " +
 //          "(#{userId}, #{consignee}, #{phone}, #{sex}, #{provinceCode}, #{provinceName}, #{cityCode}, #{cityName}, " +
 //          "#{districtCode}, #{districtName}, #{detail}, #{label}, #{isDefault})")
-  @Insert("INSERT INTO address_book (user_id, consignee, phone, sex, province_code, province_name, " +
-          "city_code, city_name, district_code, district_name, school_code, school_name, campus_code, " +
+  @Insert("INSERT INTO address_book (user_id, consignee, phone, sex, " +
+          "school_code, school_name, campus_code, " +
           "campus_name, dormitory_code, dormitory_name, room_num, detail, label, is_default) " +
-          "VALUES (#{userId}, #{consignee}, #{phone}, #{sex}, #{provinceCode}, #{provinceName}," +
-          " #{cityCode}, #{cityName}, #{districtCode}, #{districtName}, #{schoolCode}, #{schoolName}, " +
+          "VALUES (#{userId}, #{consignee}, #{phone}, #{sex}," +
+          "#{schoolCode}, #{schoolName}, " +
           "#{campusCode}, #{campusName}, #{dormitoryCode}, #{dormitoryName}, #{roomNum}, #{detail}, " +
           "#{label}, #{isDefault})")
   void insert(AddressBook addressBook);

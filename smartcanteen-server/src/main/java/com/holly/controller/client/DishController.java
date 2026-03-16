@@ -28,7 +28,7 @@ import java.util.List;
 public class DishController {
   
   private final DishService dishService;
-  private final RedisTemplate<String, List<DishVO>> redisTemplate;
+  private final RedisTemplate<String, Object> redisTemplate;
   
   /**
    * 根据分类id查询菜品
@@ -39,32 +39,8 @@ public class DishController {
   @GetMapping("/list")
   @Operation(summary = "根据分类id查询菜品")
   public Result<List<DishVO>> list(@RequestParam(value = "categoryId",required = false) Long categoryId, @RequestParam("tabIndex") Integer tabIndex) {
-    String key = CachePrefixConstant.DISH_KEY + categoryId + "_" + tabIndex;
-    
-    /* 查询redis中是否存在菜品数据，存在则直接返回 */
-    List<DishVO> list = redisTemplate.opsForValue()
-            .get(key);
-    if (list != null && !list.isEmpty()) {
-      return Result.success(list);
-    }
-    
-    Dish dish = new Dish();
-    dish.setCategoryId(categoryId);
-    dish.setStatus(StatusConstant.ENABLE);
-    list = dishService.listWithFlavors(dish);
-    
-
-    //全部菜品直接返回
-    if (tabIndex == 0){
-      /* 不存在则查询数据库并存入redis */
-      redisTemplate.opsForValue().set(key, list);
-      return Result.success(list);
-    }
-    //热度菜品 根据热度排序
-    list.sort(Comparator.comparing(DishVO::getHotSpot, Comparator.nullsLast(Comparator.reverseOrder())));
-    /* 不存在则查询数据库并存入redis */
-    redisTemplate.opsForValue().set(key, list);
-    //返回
+  // 直接调用 Service 层的缓存增强方法
+    List<DishVO> list = dishService.listWithCache(categoryId, tabIndex);
     return Result.success(list);
   }
 
@@ -78,18 +54,7 @@ public class DishController {
   @GetMapping("/recommend")
   @Operation(summary = "获取前四项作为推荐菜品")
   public Result<List<DishVO>> getDish() {
-    String key = CachePrefixConstant.RECOMMEND_DISH_KEY;
-    //从redis中查询是否有推荐菜品
-    List<DishVO> dishVOS = redisTemplate.opsForValue().get(key);
-    if (dishVOS != null && !dishVOS.isEmpty()) {
-      return Result.success(dishVOS);
-    }
-    //没有缓存查询数据库
-    Dish dish = new Dish();
-    List<DishVO> list = dishService.listWithFlavors(dish);
-    List<DishVO> fourDish = new ArrayList<>(list.subList(0, 4));
-    //存入缓存
-    redisTemplate.opsForValue().set(key, fourDish);
-    return Result.success(fourDish);
+    List<DishVO> dishVOS = dishService.listRecommendWithCache();
+    return Result.success(dishVOS);
   }
 }
