@@ -17,8 +17,8 @@ public interface KnowledgeBaseMapper {
      * @param knowledgeBase
      * @return
      */
-    @Insert("insert into knowledge_base(file_name, redis_ids,url, created_time) " +
-            "VALUES (#{fileName},#{redisIds},#{url},#{createdTime})")
+    @Insert("insert into knowledge_base(file_name, vector_ids, url, created_time) " +
+            "VALUES (#{fileName},#{vectorIds},#{url},#{createdTime})")
     int insert(KnowledgeBase knowledgeBase);
 
     /**
@@ -26,8 +26,13 @@ public interface KnowledgeBaseMapper {
      * @param fileName
      * @return
      */
-    @Select("select * from knowledge_base where file_name = #{fileName}")
+    @Select("""
+    select id, file_name, vector_ids, url, created_time
+    from knowledge_base
+    where file_name = #{fileName}
+""")
     KnowledgeBase selectByFileName(String fileName);
+
 
     /**
      * 分页查询

@@ -4,7 +4,7 @@
 <mapper namespace="com.holly.mapper.KnowledgeBaseMapper">
 
     <sql id="baseSql">
-        select id, file_name, redis_ids, url, created_time
+        select id, file_name, vector_ids, url, created_time
         from knowledge_base
     </sql>
     <delete id="deleteByIds">
@@ -19,7 +19,7 @@
     <select id="pageQuery" resultType="com.holly.entity.KnowledgeBase">
         <include refid="baseSql"/>
         <where>
-            <if test="fileName != null || fileName != ''">
+            <if test="fileName != null and fileName != ''">
                 and file_name like concat('%',#{fileName},'%')
             </if>
         </where>

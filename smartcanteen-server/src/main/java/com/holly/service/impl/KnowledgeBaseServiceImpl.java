@@ -1,5 +1,7 @@
 package com.holly.service.impl;
 
+import com.github.pagehelper.Page;
+import com.github.pagehelper.PageHelper;
 import com.holly.entity.KnowledgeBase;
 import com.holly.exception.BaseException;
 import com.holly.exception.DishExecption;
@@ -8,17 +10,17 @@ import com.holly.query.KnowledgeBasePageQueryDTO;
 import com.holly.result.PageResult;
 import com.holly.service.FileService;
 import com.holly.service.KnowledgeBaseService;
-import com.github.pagehelper.Page;
-import com.github.pagehelper.PageHelper;
-import dev.langchain4j.community.store.embedding.redis.RedisEmbeddingStore;
 import dev.langchain4j.data.document.Document;
 import dev.langchain4j.data.document.DocumentSplitter;
 import dev.langchain4j.data.document.loader.UrlDocumentLoader;
 import dev.langchain4j.data.document.parser.TextDocumentParser;
 import dev.langchain4j.data.document.parser.apache.pdfbox.ApachePdfBoxDocumentParser;
+import dev.langchain4j.data.document.parser.apache.poi.ApachePoiDocumentParser;
 import dev.langchain4j.data.document.parser.apache.tika.ApacheTikaDocumentParser;
 import dev.langchain4j.data.document.splitter.DocumentSplitters;
+import dev.langchain4j.data.segment.TextSegment;
 import dev.langchain4j.model.embedding.EmbeddingModel;
+import dev.langchain4j.store.embedding.EmbeddingStore;
 import dev.langchain4j.store.embedding.MyEmbeddingStoreIngestor;
 import dev.langchain4j.store.embedding.MyIngestionResult;
 import lombok.extern.slf4j.Slf4j;
@@ -36,108 +38,88 @@ import static com.holly.constant.MessageConstant.INVALID_PARAM;
 @Service
 @Slf4j
 public class KnowledgeBaseServiceImpl implements KnowledgeBaseService {
-    
+
     @Autowired
     private FileService fileService;
-    
+
     @Autowired
     private EmbeddingModel embeddingModel;
-    
+
     @Autowired(required = false)
-    private RedisEmbeddingStore redisEmbeddingStore;
-    
+    private EmbeddingStore<TextSegment> embeddingStore;
+
     @Autowired
     private KnowledgeBaseMapper knowledgeBaseMapper;
+
     private static final String OK = "ok";
     private static final String ERROR = "error";
 
-    /**
-     * 新增知识库
-     *
-     * @param file
-     * @return
-     */
     @Override
     public String addKnowledgeBase(MultipartFile file) throws Exception {
-        // 检查 RedisEmbeddingStore 是否可用
-        if (redisEmbeddingStore == null) {
-            throw new BaseException("知识库功能不可用：需要 Redis Stack 支持。请启动 Redis Stack 或联系管理员。");
+        if (embeddingStore == null) {
+            throw new BaseException("知识库功能不可用：请检查 Zilliz Cloud / Milvus 向量库配置。");
         }
-        
-        //获取原始名称
+
         String originalFilename = file.getOriginalFilename();
         log.info("原始名称==> {}", originalFilename);
         KnowledgeBase dbKnowledgeBase = knowledgeBaseMapper.selectByFileName(originalFilename);
-        //判断文件是否存在
-        if (dbKnowledgeBase != null){
+        if (dbKnowledgeBase != null) {
             throw new DishExecption(FILE_EXISTS);
         }
-        //先把文件上传到minio
+
         String url = fileService.uploadMinio(file);
-        //获取文件后缀
-        String suffix = originalFilename.substring(originalFilename.lastIndexOf("."));
+        String suffix = originalFilename.substring(originalFilename.lastIndexOf(".")).toLowerCase();
         log.info("文件后缀==> {}", suffix);
-        Document document = null;
-        //判断文件类型 使用不同的解析器
+
+        Document document;
         if (".pdf".equals(suffix)) {
             document = UrlDocumentLoader.load(url, new ApachePdfBoxDocumentParser());
-        } else if (".txt".equals(suffix)) {
+        } else if (".txt".equals(suffix) || ".md".equals(suffix)) {
             document = UrlDocumentLoader.load(url, new TextDocumentParser());
-        } else if(".md".equals(suffix)){
-            document = UrlDocumentLoader.load(url, new TextDocumentParser());
+        } else if (".doc".equals(suffix) || ".docx".equals(suffix)
+                || ".ppt".equals(suffix) || ".pptx".equals(suffix)
+                || ".xls".equals(suffix) || ".xlsx".equals(suffix)) {
+            document = UrlDocumentLoader.load(url, new ApachePoiDocumentParser());
         } else {
-            //使用通用类型解析
             document = UrlDocumentLoader.load(url, new ApacheTikaDocumentParser());
         }
 
         document.metadata().put("file_name", originalFilename);
-        //构建通用文本分割器
         DocumentSplitter recursive = DocumentSplitters.recursive(300, 100);
 
-        //构建文本向量存储器
         MyEmbeddingStoreIngestor ingestor = MyEmbeddingStoreIngestor.builder()
                 .embeddingModel(embeddingModel)
-                .embeddingStore(redisEmbeddingStore)
+                .embeddingStore(embeddingStore)
                 .documentSplitter(recursive)
                 .build();
-        //向量存储
-        MyIngestionResult ingest = null;
+
         try {
-            ingest = ingestor.ingest(document);
-            //获取存储在redis中的id
+            MyIngestionResult ingest = ingestor.ingest(document);
             List<String> ids = ingest.getIds();
-            //以,进行拼接
             String idsStr = StringUtils.join(ids, ",");
 
             KnowledgeBase knowledgeBase = KnowledgeBase.builder()
                     .fileName(originalFilename)
-                    .redisIds(idsStr)
+                    .vectorIds(idsStr)
                     .url(url)
                     .createdTime(new Date())
                     .build();
-            int insert = knowledgeBaseMapper.insert(knowledgeBase);
 
+            int insert = knowledgeBaseMapper.insert(knowledgeBase);
             if (insert > 0) {
                 log.info("新增知识库成功");
                 return OK;
             }
         } catch (Exception e) {
-            log.error("向量存储失败");
-            e.printStackTrace();
-            //清理minio 文件
+            log.error("向量存储失败", e);
             fileService.deleteFileMinio(url);
             throw new BaseException(e.getMessage());
         }
+
         log.error("新增知识库失败");
         return ERROR;
     }
 
-    /**
-     * 分页查询知识库
-     *
-     * @param dto
-     * @return
-     */
     @Override
     public PageResult page(KnowledgeBasePageQueryDTO dto) {
         if (dto == null) {
@@ -152,11 +134,6 @@ public class KnowledgeBaseServiceImpl implements KnowledgeBaseService {
         return pageResult;
     }
 
-    /**
-     * 批量除知识库
-     *
-     * @param ids
-     */
     @Override
     public int deleteByIds(List<Integer> ids) {
         if (ids == null || ids.isEmpty()) {
@@ -165,37 +142,30 @@ public class KnowledgeBaseServiceImpl implements KnowledgeBaseService {
 
         List<KnowledgeBase> knowledgeBaseList = knowledgeBaseMapper.selectByIdList(ids);
         for (KnowledgeBase knowledgeBase : knowledgeBaseList) {
-            //获取redis中的id 以,分隔
-            String redisIds = knowledgeBase.getRedisIds();
-            deleteRedisIds(redisIds);
-            //删除minio中的文件
+            String vectorIds = knowledgeBase.getVectorIds();
+            deleteVectorIds(vectorIds);
             fileService.deleteFileMinio(knowledgeBase.getUrl());
         }
+
         int delete = knowledgeBaseMapper.deleteByIds(ids);
         if (delete > 0) {
             log.info("删除知识库成功");
             return delete;
         }
+
         log.error("删除知识库失败");
         return 0;
     }
 
-    /**
-     * 删除redis中的向量数据
-     *
-     * @param redisIds
-     */
-    private void deleteRedisIds(String redisIds) {
-        // 检查 RedisEmbeddingStore 是否可用
-        if (redisEmbeddingStore == null) {
-            log.warn("RedisEmbeddingStore 不可用，跳过删除向量数据");
+    private void deleteVectorIds(String vectorIds) {
+        if (embeddingStore == null) {
+            log.warn("EmbeddingStore 不可用，跳过删除向量数据");
             return;
         }
-        
-        //获取redis中的id 以,分隔
-        String[] split = redisIds.split(",");
+
+        String[] split = vectorIds.split(",");
         for (String id : split) {
-            redisEmbeddingStore.remove(id);
+            embeddingStore.remove(id);
         }
     }
 }

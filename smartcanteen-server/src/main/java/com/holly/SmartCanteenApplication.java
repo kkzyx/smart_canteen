@@ -16,9 +16,7 @@ import java.net.UnknownHostException;
  * @description 主程序启动类
  */
 @Slf4j
-@SpringBootApplication(exclude = {
-    dev.langchain4j.community.store.embedding.redis.spring.RedisEmbeddingStoreAutoConfiguration.class
-})
+@SpringBootApplication
 @EnableAsync
 @MapperScan("com.holly.mapper")
 @EnableAspectJAutoProxy(exposeProxy = true)

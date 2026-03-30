@@ -44,7 +44,7 @@
         <jjwt>0.9.1</jjwt>
         <jaxb-api>2.3.1</jaxb-api>
         <poi>3.16</poi>
-        <langchain4j>1.0.1-beta6</langchain4j>
+        <langchain4j>1.5.0-beta11</langchain4j>
         <jackson>2.15.2</jackson>
         <minio.version>8.4.3</minio.version>
     </properties>
@@ -230,7 +230,7 @@
             <!--redis向量数据库-->
             <dependency>
                 <groupId>dev.langchain4j</groupId>
-                <artifactId>langchain4j-community-redis-spring-boot-starter</artifactId>
+                <artifactId>langchain4j-milvus</artifactId>
                 <version>${langchain4j}</version>
             </dependency>
 

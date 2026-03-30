@@ -172,6 +172,11 @@
             <groupId>org.apache.poi</groupId>
             <artifactId>poi-ooxml</artifactId>
         </dependency>
+        <dependency>
+            <groupId>dev.langchain4j</groupId>
+            <artifactId>langchain4j-document-parser-apache-poi</artifactId>
+            <version>${langchain4j}</version>
+        </dependency>
 
         <!--langChain4j-->
         <dependency>
@@ -222,7 +227,7 @@
         <!--redis向量数据库-->
         <dependency>
             <groupId>dev.langchain4j</groupId>
-            <artifactId>langchain4j-community-redis-spring-boot-starter</artifactId>
+            <artifactId>langchain4j-milvus</artifactId>
         </dependency>
 
         <!--pdf解析器依赖-->

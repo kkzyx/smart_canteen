@@ -14,6 +14,21 @@ services:
     volumes:
       - ./docker/mysql/data:/var/lib/mysql
     command: --default-authentication-plugin=mysql_native_password
+  mysql_rag:
+    image: mysql:8.0
+    container_name: smart_mysql_rag
+    restart: no
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456
+      MYSQL_ROOT_HOST: '%'
+      MYSQL_DATABASE: smart_canteen_rag
+    ports:
+      - "3307:3306"
+    volumes:
+      - ./docker/mysql_rag/data:/var/lib/mysql
+      - ./docker/mysql_rag/init:/docker-entrypoint-initdb.d
+    command: --default-authentication-plugin=mysql_native_password
+
 
   redis:
     # 必须更换为 redis-stack-server，它内置了 LangChain4j 需要的向量搜索模块
@@ -40,7 +55,7 @@ services:
   minio:
     image: minio/minio
     container_name: smart_minio
-    restart: always
+    restart: no
     ports:
       - "9000:9000"
       - "9001:9001"
