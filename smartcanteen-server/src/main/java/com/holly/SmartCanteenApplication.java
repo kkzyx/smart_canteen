@@ -9,6 +9,8 @@ import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.core.env.Environment;
 import org.springframework.scheduling.annotation.EnableAsync;
+import org.springframework.scheduling.annotation.EnableScheduling;
+
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 
@@ -21,6 +23,7 @@ import java.net.UnknownHostException;
 @MapperScan("com.holly.mapper")
 @EnableAspectJAutoProxy(exposeProxy = true)
 @EnableCaching
+@EnableScheduling
 public class SmartCanteenApplication {
   public static void main(String[] args) throws UnknownHostException {
     SpringApplication app = new SpringApplicationBuilder(SmartCanteenApplication.class).build(args);;
