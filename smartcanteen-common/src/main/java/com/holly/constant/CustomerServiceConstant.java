@@ -31,5 +31,6 @@ public class CustomerServiceConstant {
     public static final Integer MESSAGE_TYPE_IMAGE = 2; // 图片
     public static final Integer MESSAGE_TYPE_PARAM = 3; // 参数
 
-    public static final String REDIS_KEY_SESSION_MESSAGES = "training:session:messages:";
+    public static final String REDIS_KEY_CUSTOMER_SERVICE_MESSAGES = "training:customer-service:messages:";
+    public static final String REDIS_KEY_AI_SESSION_MESSAGES = "training:ai:session:messages:";
 }

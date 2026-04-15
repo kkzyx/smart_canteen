@@ -20,8 +20,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import toolgood.words.IllegalWordsSearch;
+import toolgood.words.IllegalWordsSearchResult;
 
-import static com.holly.constant.CustomerServiceConstant.REDIS_KEY_SESSION_MESSAGES;
+import static com.holly.constant.CustomerServiceConstant.REDIS_KEY_AI_SESSION_MESSAGES;
 
 @Configuration
 public class LangChain4jConfiguration {
@@ -46,7 +48,7 @@ public class LangChain4jConfiguration {
     @Bean
     public ChatMemoryProvider chatMemoryProvider(RedisChatMemoryStore store) {
         return memoryId -> MessageWindowChatMemory.builder()
-                .id(REDIS_KEY_SESSION_MESSAGES + memoryId)
+                .id(REDIS_KEY_AI_SESSION_MESSAGES + memoryId)
                 .maxMessages(20)
                 .chatMemoryStore(store)
                 .build();

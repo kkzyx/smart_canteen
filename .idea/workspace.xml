@@ -4,8 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6303db70-7f60-4d25-811e-d09f83a5dae6" name="更改" comment="#feature: 0316version">
+    <list default="true" id="6303db70-7f60-4d25-811e-d09f83a5dae6" name="更改" comment="#feature: 0409修复启动类">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smartcanteen-common/src/main/java/com/holly/constant/CustomerServiceConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-common/src/main/java/com/holly/constant/CustomerServiceConstant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smartcanteen-common/src/main/java/com/holly/context/ToolContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-common/src/main/java/com/holly/context/ToolContext.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smartcanteen-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/config/LangChain4jConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/config/LangChain4jConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/controller/client/AiAssistantController.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/controller/client/AiAssistantController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/repository/MessageUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/repository/MessageUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/service/FileService.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/service/FileService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/service/impl/CustomerServiceServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/service/impl/CustomerServiceServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/service/impl/FileServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/service/impl/FileServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/service/impl/KnowledgeBaseServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/service/impl/KnowledgeBaseServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/service/impl/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/service/impl/OrderServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/task/OrderTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/task/OrderTask.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smartcanteen-server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/smartcanteen-server/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,31 +51,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Docker.docker-compose.yml: Compose 部署.executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Spring Boot.SmartCanteenApplication.executor": "Debug",
-    "git-widget-placeholder": "version-v2",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "J:/Spring/smart_canteen/smartcanteen-backend/smartcanteen-server/src/main/resources",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "项目",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Docker.docker-compose.yml.minio: Compose 部署.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose.yml.mysql_rag: Compose 部署.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose.yml.rabbitmq: Compose 部署.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose.yml: Compose 部署.executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Spring Boot.SmartCanteenApplication.executor&quot;: &quot;Debug&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;version-v2&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;J:/Spring/vibe coding/dianping&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;项目&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -72,7 +90,7 @@
       <recent name="com.holly.vo" />
     </key>
   </component>
-  <component name="RunManager" selected="Docker.docker-compose.yml: Compose 部署">
+  <component name="RunManager" selected="Spring Boot.SmartCanteenApplication">
     <configuration name="SmartCanteenApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="smartcanteen-server" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.holly.SmartCanteenApplication" />
@@ -94,8 +112,50 @@
       </deployment>
       <method v="2" />
     </configuration>
+    <configuration name="docker-compose.yml.minio: Compose 部署" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="minio" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml.mysql_rag: Compose 部署" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="mysql_rag" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml.rabbitmq: Compose 部署" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="rabbitmq" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Docker.docker-compose.yml.rabbitmq: Compose 部署" />
+        <item itemvalue="Docker.docker-compose.yml.mysql_rag: Compose 部署" />
+        <item itemvalue="Docker.docker-compose.yml.minio: Compose 部署" />
         <item itemvalue="Docker.docker-compose.yml: Compose 部署" />
       </list>
     </recent_temporary>
@@ -133,7 +193,19 @@
       <workItem from="1773969119477" duration="105000" />
       <workItem from="1774364120328" duration="620000" />
       <workItem from="1774797327773" duration="464000" />
-      <workItem from="1774798340754" duration="440000" />
+      <workItem from="1774798340754" duration="1363000" />
+      <workItem from="1774832989916" duration="635000" />
+      <workItem from="1774833708779" duration="5060000" />
+      <workItem from="1774855343500" duration="5630000" />
+      <workItem from="1775113896047" duration="20000" />
+      <workItem from="1775308278488" duration="5203000" />
+      <workItem from="1775662462873" duration="627000" />
+      <workItem from="1775747823629" duration="1331000" />
+      <workItem from="1775803054056" duration="9966000" />
+      <workItem from="1775825651292" duration="1798000" />
+      <workItem from="1775923192284" duration="1808000" />
+      <workItem from="1776145436759" duration="853000" />
+      <workItem from="1776175374262" duration="1404000" />
     </task>
     <task id="LOCAL-00001" summary="重命名">
       <option name="closed" value="true" />
@@ -167,18 +239,59 @@
       <option name="project" value="LOCAL" />
       <updated>1773675413490</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="#feature: 0330将redisembedding迁移为Milvus">
+      <option name="closed" value="true" />
+      <created>1774860539636</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1774860539636</updated>
+    </task>
+    <task id="LOCAL-00006" summary="#feature: 0409修复启动类">
+      <option name="closed" value="true" />
+      <created>1775747921908</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1775747921908</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/version-v2" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="重命名" />
     <MESSAGE value="#feature: 新增学校结构树缓存" />
     <MESSAGE value="#feature: 修改地址逻辑，新增ai功能" />
     <MESSAGE value="#feature: 0316version" />
-    <option name="LAST_COMMIT_MESSAGE" value="#feature: 0316version" />
+    <MESSAGE value="#feature: 0330将redisembedding迁移为Milvus" />
+    <MESSAGE value="#feature: 0409修复启动类" />
+    <option name="LAST_COMMIT_MESSAGE" value="#feature: 0409修复启动类" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -190,7 +303,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/service/impl/OrderServiceImpl.java</url>
-          <line>427</line>
+          <line>433</line>
           <option name="timeStamp" value="23" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -199,13 +312,23 @@
           <option name="timeStamp" value="50" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/service/impl/EmployeeServiceImpl.java</url>
+          <line>51</line>
+          <option name="timeStamp" value="63" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/service/impl/ShopInfoServiceImpl.java</url>
-          <line>49</line>
-          <option name="timeStamp" value="57" />
+          <line>44</line>
+          <option name="timeStamp" value="64" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/service/impl/KnowledgeBaseServiceImpl.java</url>
+          <line>61</line>
+          <option name="timeStamp" value="66" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/service/impl/OrderServiceImpl.java</url>
-          <line>402</line>
+          <line>408</line>
           <properties class="com.holly.service.impl.OrderServiceImpl" method="createDineInOrder">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
@@ -241,7 +364,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/service/impl/OrderServiceImpl.java</url>
-          <line>368</line>
+          <line>373</line>
           <properties class="com.holly.service.impl.OrderServiceImpl" method="handleTakeawayOrder">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
@@ -250,7 +373,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/service/impl/OrderServiceImpl.java</url>
-          <line>438</line>
+          <line>444</line>
           <properties class="com.holly.service.impl.OrderServiceImpl" method="createTakeawayOrder">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
@@ -259,7 +382,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/service/impl/OrderServiceImpl.java</url>
-          <line>462</line>
+          <line>468</line>
           <properties class="com.holly.service.impl.OrderServiceImpl" method="buildSubmitResult">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
@@ -274,6 +397,24 @@
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="58" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/controller/store/EmployeeController.java</url>
+          <line>39</line>
+          <properties class="com.holly.controller.store.EmployeeController" method="login">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="60" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/smartcanteen-server/src/main/java/com/holly/repository/RedisChatMemoryStore.java</url>
+          <line>33</line>
+          <properties class="com.holly.repository.RedisChatMemoryStore" method="updateMessages">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="67" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

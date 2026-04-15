@@ -28,7 +28,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 
-import static com.holly.constant.CustomerServiceConstant.REDIS_KEY_SESSION_MESSAGES;
+import static com.holly.constant.CustomerServiceConstant.REDIS_KEY_CUSTOMER_SERVICE_MESSAGES;
 import static com.holly.constant.CustomerServiceConstant.SERVICE_TYPE_HUMAN;
 
 /**
@@ -119,7 +119,7 @@ public class CustomerServiceServiceImpl implements CustomerServiceService {
      */
     private void redisMethods(CustomerServiceMessageDTO messageDTO, CustomerServiceMessage message) {
         //从redis中查询原始记录
-        String json = redisTemplate.opsForValue().get(REDIS_KEY_SESSION_MESSAGES + messageDTO.getSessionId());
+        String json = redisTemplate.opsForValue().get(REDIS_KEY_CUSTOMER_SERVICE_MESSAGES + messageDTO.getSessionId());
         List<CustomerServiceMessage> customerServiceMessages;
         if (json != null && !json.isEmpty()) {
             customerServiceMessages = JSON.parseArray(json, CustomerServiceMessage.class);
@@ -130,7 +130,7 @@ public class CustomerServiceServiceImpl implements CustomerServiceService {
         //添加新纪录
         customerServiceMessages.add(message);
         //保存到redis
-        redisTemplate.opsForValue().set(REDIS_KEY_SESSION_MESSAGES + messageDTO.getSessionId(), JSON.toJSONString(customerServiceMessages), Duration.ofDays(1));
+        redisTemplate.opsForValue().set(REDIS_KEY_CUSTOMER_SERVICE_MESSAGES + messageDTO.getSessionId(), JSON.toJSONString(customerServiceMessages), Duration.ofDays(1));
         log.info("用户发送消息，会话ID：{}，内容：{}", messageDTO.getSessionId(), messageDTO.getContent());
     }
 
@@ -170,7 +170,7 @@ public class CustomerServiceServiceImpl implements CustomerServiceService {
     @Override
     public List<CustomerServiceMessage> getSessionMessages(String sessionId, Integer type) {
         //获取redis中的数据
-        String redisKey = REDIS_KEY_SESSION_MESSAGES + sessionId;
+        String redisKey = REDIS_KEY_CUSTOMER_SERVICE_MESSAGES + sessionId;
         if (type.equals(SERVICE_TYPE_HUMAN)) {
             String json = redisTemplate.opsForValue().get(redisKey);
             List<CustomerServiceMessage> customerServiceMessages = JSON.parseArray(json, CustomerServiceMessage.class);
@@ -268,7 +268,7 @@ public class CustomerServiceServiceImpl implements CustomerServiceService {
 
         List<CustomerServiceSessionVO> activeHumanSessions = sessionMapper.getActiveHumanSessions();
         for (CustomerServiceSessionVO activeHumanSession : activeHumanSessions) {
-            String redisKey = REDIS_KEY_SESSION_MESSAGES + activeHumanSession.getSessionId();
+            String redisKey = REDIS_KEY_CUSTOMER_SERVICE_MESSAGES + activeHumanSession.getSessionId();
             String json = redisTemplate.opsForValue().get(redisKey);
             List<CustomerServiceMessage> customerServiceMessages = JSON.parseArray(json, CustomerServiceMessage.class);
             //获取最后一条消息

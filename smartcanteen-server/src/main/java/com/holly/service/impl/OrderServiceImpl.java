@@ -17,6 +17,9 @@ import com.holly.exception.AddressBookBusinessException;
 import com.holly.exception.OrderBusinessException;
 import com.holly.exception.ShoppingCartBusinessException;
 import com.holly.mapper.*;
+import com.holly.mq.message.OrderPaidMessage;
+import com.holly.mq.message.OrderTimeoutMessage;
+import com.holly.mq.producer.BusinessEventProducer;
 import com.holly.query.OrdersPageQueryDTO;
 import com.holly.result.PageResult;
 import com.holly.service.OrderService;
@@ -62,6 +65,7 @@ public class OrderServiceImpl implements OrderService {
     private final SetmealMapper setmealMapper;
     private final RedisTemplate<String, Object> redisTemplate;
     private final UserCouponService userCouponService;
+    private final BusinessEventProducer businessEventProducer;
 
     /**
      * 条件搜索订单
@@ -362,6 +366,7 @@ public class OrderServiceImpl implements OrderService {
 
         // 清空购物车
         shoppingCartMapper.deleteByUserId(userId);
+        businessEventProducer.sendOrderTimeoutMessageAfterCommit(new OrderTimeoutMessage(orders.getId()));
 
         return buildSubmitResult(orders, pickupNumber);
     }
@@ -388,6 +393,7 @@ public class OrderServiceImpl implements OrderService {
 
         // 清空购物车
         shoppingCartMapper.deleteByUserId(userId);
+        businessEventProducer.sendOrderTimeoutMessageAfterCommit(new OrderTimeoutMessage(orders.getId()));
 
         return buildSubmitResult(orders, null);
     }
@@ -484,15 +490,6 @@ public class OrderServiceImpl implements OrderService {
         List<OrderDetail> orderDetailList = new ArrayList<>();
 
         shoppingCartList.forEach(cart -> {
-            //为对应的菜品增加热度
-            if (cart.getDishId() != null) {
-                dishMapper.updateHotDish(cart.getDishId());
-            }
-
-            //为对应的套餐增加热度
-            if (cart.getSetmealId() != null) {
-                setmealMapper.updateHotSetmeal(cart.getSetmealId());
-            }
             OrderDetail orderDetail = new OrderDetail();
             BeanUtils.copyProperties(cart, orderDetail);
             orderDetail.setOrderId(orders.getId());
@@ -747,18 +744,10 @@ public class OrderServiceImpl implements OrderService {
                 .build();
         // 更新订单状态为已支付
         orderMapper.update(orders);
-
-        /* 通过WebSocket向客户端推送消息，type（1：来单提醒，2：催单）、orderId（订单id）、content（消息内容） */
-        Map<String, Object> map = new HashMap<>();
-        map.put("type", 1);
-        map.put("orderId", ordersDB.getId());
-        map.put("content", "订单号" + orderNumber);
-
-        // 清理用户订单缓存
-        clearUserOrderCache(userId);
-
-        // 将map转为json字符串，发送给客户端
-        String jsonString = JSON.toJSONString(map);
-        webSocketServer.sendToAllClient(jsonString);
+        businessEventProducer.sendOrderPaidMessageAfterCommit(OrderPaidMessage.builder()
+                .orderId(ordersDB.getId())
+                .userId(userId)
+                .orderNumber(orderNumber)
+                .build());
     }
 }

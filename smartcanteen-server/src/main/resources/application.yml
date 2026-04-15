@@ -21,7 +21,7 @@ spring:
     serialization:
       write-dates-as-timestamps: false
   profiles:
-    active: prod
+    active: rag
   mvc:
     pathmatch:
       matching-strategy: ant_path_matcher
@@ -53,6 +53,15 @@ spring:
       port: ${training.redis.port}
       password: ${training.redis.password}
       database: ${training.redis.database}
+  rabbitmq:
+    host: ${training.rabbitmq.host:localhost}
+    port: ${training.rabbitmq.port:5672}
+    username: ${training.rabbitmq.username:guest}
+    password: ${training.rabbitmq.password:guest}
+    virtual-host: ${training.rabbitmq.virtual-host:/}
+    listener:
+      simple:
+        acknowledge-mode: auto
 
 mybatis:
   mapper-locations: classpath:mapper/*.xml
